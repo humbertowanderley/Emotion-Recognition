@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/CIN/hawn/Downloads/Emotion_Recognition
+CMAKE_SOURCE_DIR = /home/CIN/hawn/Downloads/emotion/Emotion-Recognition
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/CIN/hawn/Downloads/Emotion_Recognition/build
+CMAKE_BINARY_DIR = /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build
 
 # Include any dependencies generated for this target.
 include dlib_build/CMakeFiles/dlib.dir/depend.make
@@ -51,17 +51,17 @@ include dlib_build/CMakeFiles/dlib.dir/flags.make
 
 dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o: ../dlib/base64/base64_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/base64/base64_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/base64/base64_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/base64/base64_kernel_1.cpp > CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/base64/base64_kernel_1.cpp > CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/base64/base64_kernel_1.cpp -o CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/base64/base64_kernel_1.cpp -o CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o.requires
@@ -74,17 +74,17 @@ dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o: ../dlib/bigint/bigint_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_1.cpp > CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_1.cpp > CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_1.cpp -o CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_1.cpp -o CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o.requires
@@ -97,17 +97,17 @@ dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o: ../dlib/bigint/bigint_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_2.cpp > CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_2.cpp > CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bigint/bigint_kernel_2.cpp -o CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bigint/bigint_kernel_2.cpp -o CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o.requires
@@ -120,17 +120,17 @@ dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o: ../dlib/bit_stream/bit_stream_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp > CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp > CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp -o CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bit_stream/bit_stream_kernel_1.cpp -o CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o.requires
@@ -143,17 +143,17 @@ dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o.provides.bui
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o: ../dlib/entropy_decoder/entropy_decoder_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp > CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp > CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_1.cpp -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o.requires
@@ -166,17 +166,17 @@ dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o.pr
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o: ../dlib/entropy_decoder/entropy_decoder_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp > CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp > CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_decoder/entropy_decoder_kernel_2.cpp -o CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o.requires
@@ -189,17 +189,17 @@ dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o.pr
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o: ../dlib/entropy_encoder/entropy_encoder_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp > CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp > CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_1.cpp -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o.requires
@@ -212,17 +212,17 @@ dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o.pr
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o: ../dlib/entropy_encoder/entropy_encoder_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp > CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp > CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/entropy_encoder/entropy_encoder_kernel_2.cpp -o CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o.requires
@@ -235,17 +235,17 @@ dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o.pr
 
 dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o: ../dlib/md5/md5_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/md5/md5_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/md5/md5_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/md5/md5_kernel_1.cpp > CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/md5/md5_kernel_1.cpp > CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/md5/md5_kernel_1.cpp -o CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/md5/md5_kernel_1.cpp -o CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o.requires
@@ -258,17 +258,17 @@ dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o.provides.build: dlib_build
 
 dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o: ../dlib/tokenizer/tokenizer_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp > CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp > CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp -o CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/tokenizer/tokenizer_kernel_1.cpp -o CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o.requires
@@ -281,17 +281,17 @@ dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o.provides.build
 
 dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o: ../dlib/unicode/unicode.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/unicode/unicode.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/unicode/unicode.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/unicode/unicode.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/unicode/unicode.cpp
 
 dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/unicode/unicode.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/unicode/unicode.cpp > CMakeFiles/dlib.dir/unicode/unicode.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/unicode/unicode.cpp > CMakeFiles/dlib.dir/unicode/unicode.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/unicode/unicode.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/unicode/unicode.cpp -o CMakeFiles/dlib.dir/unicode/unicode.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/unicode/unicode.cpp -o CMakeFiles/dlib.dir/unicode/unicode.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o.requires
@@ -304,17 +304,17 @@ dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o.provides.build: dlib_build/
 
 dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o: ../dlib/data_io/image_dataset_metadata.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/image_dataset_metadata.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/image_dataset_metadata.cpp
 
 dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/image_dataset_metadata.cpp > CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/image_dataset_metadata.cpp > CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/image_dataset_metadata.cpp -o CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/image_dataset_metadata.cpp -o CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o.requires
@@ -327,17 +327,17 @@ dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o.provides.bui
 
 dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o: ../dlib/data_io/mnist.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/data_io/mnist.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/mnist.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/data_io/mnist.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/mnist.cpp
 
 dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/data_io/mnist.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/mnist.cpp > CMakeFiles/dlib.dir/data_io/mnist.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/mnist.cpp > CMakeFiles/dlib.dir/data_io/mnist.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/data_io/mnist.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/data_io/mnist.cpp -o CMakeFiles/dlib.dir/data_io/mnist.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/data_io/mnist.cpp -o CMakeFiles/dlib.dir/data_io/mnist.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o.requires
@@ -350,17 +350,17 @@ dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o.provides.build: dlib_build/CM
 
 dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o: ../dlib/dnn/cpu_dlib.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/cpu_dlib.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/cpu_dlib.cpp
 
 dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/cpu_dlib.cpp > CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/cpu_dlib.cpp > CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/cpu_dlib.cpp -o CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/cpu_dlib.cpp -o CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o.requires
@@ -373,17 +373,17 @@ dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o.provides.build: dlib_build/CMa
 
 dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o: ../dlib/dnn/tensor_tools.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/tensor_tools.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/tensor_tools.cpp
 
 dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/tensor_tools.cpp > CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/tensor_tools.cpp > CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dnn/tensor_tools.cpp -o CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dnn/tensor_tools.cpp -o CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o.requires
@@ -396,17 +396,17 @@ dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o.provides.build: dlib_build
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o: ../dlib/sockets/sockets_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_1.cpp > CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_1.cpp > CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_1.cpp -o CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_1.cpp -o CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o.requires
@@ -419,17 +419,17 @@ dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o: ../dlib/bsp/bsp.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bsp/bsp.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bsp/bsp.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/bsp/bsp.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bsp/bsp.cpp
 
 dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/bsp/bsp.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bsp/bsp.cpp > CMakeFiles/dlib.dir/bsp/bsp.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bsp/bsp.cpp > CMakeFiles/dlib.dir/bsp/bsp.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/bsp/bsp.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/bsp/bsp.cpp -o CMakeFiles/dlib.dir/bsp/bsp.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/bsp/bsp.cpp -o CMakeFiles/dlib.dir/bsp/bsp.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o.requires
@@ -442,17 +442,17 @@ dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o.provides.build: dlib_build/CMakeFil
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o: ../dlib/dir_nav/dir_nav_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_1.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o.requires
@@ -465,17 +465,17 @@ dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o: ../dlib/dir_nav/dir_nav_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_kernel_2.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o.requires
@@ -488,17 +488,17 @@ dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o: ../dlib/dir_nav/dir_nav_extensions.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_extensions.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_extensions.cpp
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_extensions.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_extensions.cpp > CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/dir_nav/dir_nav_extensions.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/dir_nav/dir_nav_extensions.cpp -o CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o.requires
@@ -511,17 +511,17 @@ dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o: ../dlib/linker/linker_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/linker/linker_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/linker/linker_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/linker/linker_kernel_1.cpp > CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/linker/linker_kernel_1.cpp > CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/linker/linker_kernel_1.cpp -o CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/linker/linker_kernel_1.cpp -o CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o.requires
@@ -534,17 +534,17 @@ dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o: ../dlib/logger/extra_logger_headers.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/extra_logger_headers.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/extra_logger_headers.cpp
 
 dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/extra_logger_headers.cpp > CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/extra_logger_headers.cpp > CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/extra_logger_headers.cpp -o CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/extra_logger_headers.cpp -o CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o.requires
@@ -557,17 +557,17 @@ dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o.provides.build:
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o: ../dlib/logger/logger_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_kernel_1.cpp > CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_kernel_1.cpp > CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_kernel_1.cpp -o CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_kernel_1.cpp -o CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o.requires
@@ -580,17 +580,17 @@ dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o: ../dlib/logger/logger_config_file.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_config_file.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_config_file.cpp
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/logger/logger_config_file.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_config_file.cpp > CMakeFiles/dlib.dir/logger/logger_config_file.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_config_file.cpp > CMakeFiles/dlib.dir/logger/logger_config_file.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/logger/logger_config_file.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/logger/logger_config_file.cpp -o CMakeFiles/dlib.dir/logger/logger_config_file.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/logger/logger_config_file.cpp -o CMakeFiles/dlib.dir/logger/logger_config_file.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o.requires
@@ -603,17 +603,17 @@ dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o.provides.build: d
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o: ../dlib/misc_api/misc_api_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_1.cpp > CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_1.cpp > CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_1.cpp -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_1.cpp -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o.requires
@@ -626,17 +626,17 @@ dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o: ../dlib/misc_api/misc_api_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_2.cpp > CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_2.cpp > CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/misc_api/misc_api_kernel_2.cpp -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/misc_api/misc_api_kernel_2.cpp -o CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o.requires
@@ -649,17 +649,17 @@ dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o: ../dlib/sockets/sockets_extensions.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_extensions.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_extensions.cpp
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_extensions.cpp > CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_extensions.cpp > CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_extensions.cpp -o CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_extensions.cpp -o CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o.requires
@@ -672,17 +672,17 @@ dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o: ../dlib/sockets/sockets_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_2.cpp > CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_2.cpp > CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockets/sockets_kernel_2.cpp -o CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockets/sockets_kernel_2.cpp -o CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o.requires
@@ -695,17 +695,17 @@ dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o: ../dlib/sockstreambuf/sockstreambuf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf.cpp
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf.cpp > CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf.cpp > CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf.cpp -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf.cpp -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o.requires
@@ -718,17 +718,17 @@ dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o.provides.build:
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o: ../dlib/sockstreambuf/sockstreambuf_unbuffered.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp > CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp > CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/sockstreambuf/sockstreambuf_unbuffered.cpp -o CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o.requires
@@ -741,17 +741,17 @@ dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o.prov
 
 dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o: ../dlib/server/server_kernel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_kernel.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_kernel.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_kernel.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_kernel.cpp
 
 dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/server/server_kernel.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_kernel.cpp > CMakeFiles/dlib.dir/server/server_kernel.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_kernel.cpp > CMakeFiles/dlib.dir/server/server_kernel.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/server/server_kernel.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_kernel.cpp -o CMakeFiles/dlib.dir/server/server_kernel.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_kernel.cpp -o CMakeFiles/dlib.dir/server/server_kernel.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o.requires
@@ -764,17 +764,17 @@ dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o.provides.build: dlib_b
 
 dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o: ../dlib/server/server_iostream.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_iostream.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_iostream.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_iostream.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_iostream.cpp
 
 dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/server/server_iostream.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_iostream.cpp > CMakeFiles/dlib.dir/server/server_iostream.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_iostream.cpp > CMakeFiles/dlib.dir/server/server_iostream.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/server/server_iostream.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_iostream.cpp -o CMakeFiles/dlib.dir/server/server_iostream.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_iostream.cpp -o CMakeFiles/dlib.dir/server/server_iostream.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o.requires
@@ -787,17 +787,17 @@ dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o.provides.build: dlib
 
 dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o: ../dlib/server/server_http.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_http.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_http.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/server/server_http.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_http.cpp
 
 dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/server/server_http.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_http.cpp > CMakeFiles/dlib.dir/server/server_http.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_http.cpp > CMakeFiles/dlib.dir/server/server_http.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/server/server_http.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/server/server_http.cpp -o CMakeFiles/dlib.dir/server/server_http.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/server/server_http.cpp -o CMakeFiles/dlib.dir/server/server_http.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o.requires
@@ -810,17 +810,17 @@ dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o.provides.build: dlib_bui
 
 dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o: ../dlib/threads/multithreaded_object_extension.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/multithreaded_object_extension.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/multithreaded_object_extension.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/multithreaded_object_extension.cpp > CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/multithreaded_object_extension.cpp > CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/multithreaded_object_extension.cpp -o CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/multithreaded_object_extension.cpp -o CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o.requires
@@ -833,17 +833,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o.prov
 
 dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o: ../dlib/threads/threaded_object_extension.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threaded_object_extension.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threaded_object_extension.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threaded_object_extension.cpp > CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threaded_object_extension.cpp > CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threaded_object_extension.cpp -o CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threaded_object_extension.cpp -o CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o.requires
@@ -856,17 +856,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o.provides.
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o: ../dlib/threads/threads_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_1.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_1.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_1.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_1.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o.requires
@@ -879,17 +879,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o: ../dlib/threads/threads_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_2.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_2.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_2.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_2.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o.requires
@@ -902,17 +902,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o: ../dlib/threads/threads_kernel_shared.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_shared.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_shared.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_shared.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_shared.cpp > CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/threads_kernel_shared.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/threads_kernel_shared.cpp -o CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o.requires
@@ -925,17 +925,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o.provides.buil
 
 dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o: ../dlib/threads/thread_pool_extension.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/thread_pool_extension.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/thread_pool_extension.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/thread_pool_extension.cpp > CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/thread_pool_extension.cpp > CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/thread_pool_extension.cpp -o CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/thread_pool_extension.cpp -o CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o.requires
@@ -948,17 +948,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o.provides.buil
 
 dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o: ../dlib/threads/async.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/async.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/async.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/threads/async.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/async.cpp
 
 dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/threads/async.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/async.cpp > CMakeFiles/dlib.dir/threads/async.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/async.cpp > CMakeFiles/dlib.dir/threads/async.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/threads/async.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/threads/async.cpp -o CMakeFiles/dlib.dir/threads/async.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/threads/async.cpp -o CMakeFiles/dlib.dir/threads/async.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o.requires
@@ -971,17 +971,17 @@ dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o.provides.build: dlib_build/CM
 
 dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o: ../dlib/timer/timer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/timer/timer.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/timer/timer.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/timer/timer.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/timer/timer.cpp
 
 dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/timer/timer.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/timer/timer.cpp > CMakeFiles/dlib.dir/timer/timer.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/timer/timer.cpp > CMakeFiles/dlib.dir/timer/timer.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/timer/timer.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/timer/timer.cpp -o CMakeFiles/dlib.dir/timer/timer.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/timer/timer.cpp -o CMakeFiles/dlib.dir/timer/timer.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o.requires
@@ -994,17 +994,17 @@ dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o.provides.build: dlib_build/CMak
 
 dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o: ../dlib/stack_trace.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/stack_trace.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/stack_trace.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/stack_trace.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/stack_trace.cpp
 
 dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/stack_trace.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/stack_trace.cpp > CMakeFiles/dlib.dir/stack_trace.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/stack_trace.cpp > CMakeFiles/dlib.dir/stack_trace.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/stack_trace.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/stack_trace.cpp -o CMakeFiles/dlib.dir/stack_trace.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/stack_trace.cpp -o CMakeFiles/dlib.dir/stack_trace.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o.requires
@@ -1017,17 +1017,17 @@ dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o.provides.build: dlib_build/CMak
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o: ../dlib/gui_widgets/fonts.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/fonts.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/fonts.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/fonts.cpp > CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/fonts.cpp > CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/fonts.cpp -o CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/fonts.cpp -o CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o.requires
@@ -1040,17 +1040,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o.provides.build: dlib_buil
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o: ../dlib/gui_widgets/widgets.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/widgets.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/widgets.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/widgets.cpp > CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/widgets.cpp > CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/widgets.cpp -o CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/widgets.cpp -o CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o.requires
@@ -1063,17 +1063,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o.provides.build: dlib_bu
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o: ../dlib/gui_widgets/drawable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/drawable.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/drawable.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/drawable.cpp > CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/drawable.cpp > CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/drawable.cpp -o CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/drawable.cpp -o CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o.requires
@@ -1086,17 +1086,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o.provides.build: dlib_b
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o: ../dlib/gui_widgets/canvas_drawing.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/canvas_drawing.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/canvas_drawing.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/canvas_drawing.cpp > CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/canvas_drawing.cpp > CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/canvas_drawing.cpp -o CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/canvas_drawing.cpp -o CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o.requires
@@ -1109,17 +1109,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o: ../dlib/gui_widgets/style.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/style.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/style.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/style.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/style.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/style.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/style.cpp > CMakeFiles/dlib.dir/gui_widgets/style.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/style.cpp > CMakeFiles/dlib.dir/gui_widgets/style.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/style.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/style.cpp -o CMakeFiles/dlib.dir/gui_widgets/style.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/style.cpp -o CMakeFiles/dlib.dir/gui_widgets/style.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o.requires
@@ -1132,17 +1132,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o.provides.build: dlib_buil
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o: ../dlib/gui_widgets/base_widgets.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/base_widgets.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/base_widgets.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/base_widgets.cpp > CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/base_widgets.cpp > CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_widgets/base_widgets.cpp -o CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_widgets/base_widgets.cpp -o CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o.requires
@@ -1155,17 +1155,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o: ../dlib/gui_core/gui_core_kernel_1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_1.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_1.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_1.cpp > CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_1.cpp > CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_1.cpp -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_1.cpp -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o.requires
@@ -1178,17 +1178,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o: ../dlib/gui_core/gui_core_kernel_2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_2.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_2.cpp
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_2.cpp > CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_2.cpp > CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/gui_core/gui_core_kernel_2.cpp -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/gui_core/gui_core_kernel_2.cpp -o CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o.requires
@@ -1201,17 +1201,17 @@ dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o.provides.build: 
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o: ../dlib/image_loader/png_loader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/png_loader.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/png_loader.cpp
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/image_loader/png_loader.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/png_loader.cpp > CMakeFiles/dlib.dir/image_loader/png_loader.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/png_loader.cpp > CMakeFiles/dlib.dir/image_loader/png_loader.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/image_loader/png_loader.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/png_loader.cpp -o CMakeFiles/dlib.dir/image_loader/png_loader.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/png_loader.cpp -o CMakeFiles/dlib.dir/image_loader/png_loader.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o.requires
@@ -1224,17 +1224,17 @@ dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o.provides.build: dli
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o: ../dlib/image_saver/save_png.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_52)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_saver/save_png.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_png.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_saver/save_png.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_png.cpp
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/image_saver/save_png.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_png.cpp > CMakeFiles/dlib.dir/image_saver/save_png.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_png.cpp > CMakeFiles/dlib.dir/image_saver/save_png.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/image_saver/save_png.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_png.cpp -o CMakeFiles/dlib.dir/image_saver/save_png.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_png.cpp -o CMakeFiles/dlib.dir/image_saver/save_png.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o.requires
@@ -1247,17 +1247,17 @@ dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o.provides.build: dlib_b
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o: ../dlib/image_loader/jpeg_loader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_53)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_53)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/jpeg_loader.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/jpeg_loader.cpp
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/jpeg_loader.cpp > CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/jpeg_loader.cpp > CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_loader/jpeg_loader.cpp -o CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_loader/jpeg_loader.cpp -o CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o.requires
@@ -1270,17 +1270,17 @@ dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o.provides.build: dl
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o: dlib_build/CMakeFiles/dlib.dir/flags.make
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o: ../dlib/image_saver/save_jpeg.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles $(CMAKE_PROGRESS_54)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles $(CMAKE_PROGRESS_54)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o -c /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_jpeg.cpp
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_jpeg.cpp
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.i"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_jpeg.cpp > CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.i
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_jpeg.cpp > CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.i
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.s"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/Emotion_Recognition/dlib/image_saver/save_jpeg.cpp -o CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.s
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib/image_saver/save_jpeg.cpp -o CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.s
 
 dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o.requires:
 .PHONY : dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o.requires
@@ -1408,8 +1408,8 @@ dlib_build/libdlib.a: dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o
 dlib_build/libdlib.a: dlib_build/CMakeFiles/dlib.dir/build.make
 dlib_build/libdlib.a: dlib_build/CMakeFiles/dlib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libdlib.a"
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && $(CMAKE_COMMAND) -P CMakeFiles/dlib.dir/cmake_clean_target.cmake
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dlib.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && $(CMAKE_COMMAND) -P CMakeFiles/dlib.dir/cmake_clean_target.cmake
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dlib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 dlib_build/CMakeFiles/dlib.dir/build: dlib_build/libdlib.a
@@ -1472,10 +1472,10 @@ dlib_build/CMakeFiles/dlib.dir/requires: dlib_build/CMakeFiles/dlib.dir/image_sa
 .PHONY : dlib_build/CMakeFiles/dlib.dir/requires
 
 dlib_build/CMakeFiles/dlib.dir/clean:
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build && $(CMAKE_COMMAND) -P CMakeFiles/dlib.dir/cmake_clean.cmake
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build && $(CMAKE_COMMAND) -P CMakeFiles/dlib.dir/cmake_clean.cmake
 .PHONY : dlib_build/CMakeFiles/dlib.dir/clean
 
 dlib_build/CMakeFiles/dlib.dir/depend:
-	cd /home/CIN/hawn/Downloads/Emotion_Recognition/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/CIN/hawn/Downloads/Emotion_Recognition /home/CIN/hawn/Downloads/Emotion_Recognition/dlib /home/CIN/hawn/Downloads/Emotion_Recognition/build /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build /home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/CIN/hawn/Downloads/emotion/Emotion-Recognition /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dlib_build/CMakeFiles/dlib.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/CIN/hawn/Downloads/Emotion_Recognition/dlib
+# Install script for directory: /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/dlib
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

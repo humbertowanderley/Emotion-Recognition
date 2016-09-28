@@ -4,13 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/CIN/hawn/Downloads/Emotion_Recognition/face_landmark_detection_ex.cpp" "/home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles/face_landmark_detection_ex.dir/face_landmark_detection_ex.cpp.o"
+  "/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/face_landmark_detection_ex.cpp" "/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/face_landmark_detection_ex.dir/face_landmark_detection_ex.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
+  "/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
