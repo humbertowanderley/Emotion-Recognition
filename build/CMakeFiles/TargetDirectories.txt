@@ -1,0 +1,2 @@
+/home/CIN/hawn/Downloads/Emotion_Recognition/build/dlib_build/CMakeFiles/dlib.dir
+/home/CIN/hawn/Downloads/Emotion_Recognition/build/CMakeFiles/face_landmark_detection_ex.dir
