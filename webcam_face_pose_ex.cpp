@@ -51,6 +51,7 @@ int main()
 
     cv::Mat temp;
     pair<float,float> landmarks[68];
+    pair<float,float> norm[68];
     try
     {
         cv::VideoCapture cap(0);
@@ -101,6 +102,7 @@ int main()
 
             for (int i = 0; i < 68 ; ++i){
                 cout<<"("<<landmarks[i].first<<","<<landmarks[i].second<<"), ";
+                // norm[i] = (landmarks[i]-min(landmarks))/(max(landmarks)-min(landmarks)) ;
             }
 
             cout<<" "<<endl;
