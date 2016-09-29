@@ -1,23 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3052619740/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3052619740.dir/build.make CMakeFiles/cmTryCompileExec3052619740.dir/build
-make[1]: Entering directory `/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3052619740.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3052619740.dir/CheckSymbolExists.c.o   -c /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec3052619740
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3052619740.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3052619740.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3052619740 -rdynamic 
-CMakeFiles/cmTryCompileExec3052619740.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_fe554/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe554.dir/build.make CMakeFiles/cmTC_fe554.dir/build
+make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fe554.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fe554.dir/CheckSymbolExists.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fe554
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe554.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fe554.dir/CheckSymbolExists.c.o  -o cmTC_fe554 -rdynamic 
+CMakeFiles/cmTC_fe554.dir/CheckSymbolExists.c.o: na função `main':
+CheckSymbolExists.c:(.text+0x16): referência indefinida para `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec3052619740] Error 1
-make[1]: Leaving directory `/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3052619740/fast] Error 2
+CMakeFiles/cmTC_fe554.dir/build.make:97: recipe for target 'cmTC_fe554' failed
+make[1]: *** [cmTC_fe554] Error 1
+make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fe554/fast' failed
+make: *** [cmTC_fe554/fast] Error 2
 
-File /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -33,21 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1849375293/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1849375293.dir/build.make CMakeFiles/cmTryCompileExec1849375293.dir/build
-make[1]: Entering directory `/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1849375293.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1849375293.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1849375293
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1849375293.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1849375293.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1849375293 -rdynamic -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
+Run Build Command:"/usr/bin/make" "cmTC_3b1a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b1a0.dir/build.make CMakeFiles/cmTC_3b1a0.dir/build
+make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b1a0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3b1a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b1a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b1a0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3b1a0.dir/CheckFunctionExists.c.o  -o cmTC_3b1a0 -rdynamic -lpthreads 
+/usr/bin/ld: não foi possível encontrar -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec1849375293] Error 1
-make[1]: Leaving directory `/home/CIN/hawn/Downloads/emotion/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec1849375293/fast] Error 2
+CMakeFiles/cmTC_3b1a0.dir/build.make:97: recipe for target 'cmTC_3b1a0' failed
+make[1]: *** [cmTC_3b1a0] Error 1
+make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3b1a0/fast' failed
+make: *** [cmTC_3b1a0/fast] Error 2
 
 
