@@ -33,23 +33,24 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
-#include <list>
+#include <utility>
 
 using namespace dlib;
 using namespace std;
 
 
-void featuresExtraction(full_object_detection shape,list<float> *lx,
-                        list<float> *ly)
+void featuresExtraction(full_object_detection shape, pair<float,float> *l)
 {
     for (int i = 0; i < shape.num_parts(); ++i){
-        lx->push_back( (float) shape.part(i).x() );
-        ly->push_back( (float) shape.part(i).y() );
+        l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
     }
 }
+
 int main()
 {
-    std::list<float> lx,ly;
+
+    cv::Mat temp;
+    pair<float,float> landmarks[68];
     try
     {
         cv::VideoCapture cap(0);
@@ -70,7 +71,6 @@ int main()
         while(!win.is_closed())
         {
             // Grab a frame
-            cv::Mat temp;
             cap >> temp;
             // Turn OpenCV's Mat into something dlib can deal with.  Note that this just
             // wraps the Mat object, it doesn't copy anything.  So cimg is only valid as
@@ -82,11 +82,12 @@ int main()
 
             // Detect faces
             std::vector<rectangle> faces = detector(cimg);
-            // Find the pose of each face.
+            // Find the pose of each face.]
+
             std::vector<full_object_detection> shapes;
             for (unsigned long i = 0; i < faces.size(); ++i){
                 shapes.push_back(pose_model(cimg, faces[i]));
-                featuresExtraction(shapes[i],&lx,&ly);
+                featuresExtraction(shapes[i],landmarks);
             }
 
 
@@ -96,13 +97,13 @@ int main()
             win.set_image(cimg);
             win.add_overlay(render_face_detections(shapes));
 
-            // cout<<"Vetor de landmarks: ";
+            cout<<"Vetor de landmarks: ";
 
-            // for (int i = 0,j=0; i < lx.size() && j < ly.size(); ++i,j++){
-            //     cout<<"("<<i<<","<<j<<"), ";
-            // }
+            for (int i = 0; i < 68 ; ++i){
+                cout<<"("<<landmarks[i].first<<","<<landmarks[i].second<<"), ";
+            }
 
-            // cout<<" "<<endl;
+            cout<<" "<<endl;
         }
     }
     catch(serialization_error& e)
