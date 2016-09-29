@@ -4,11 +4,11 @@
     This example program shows how to find frontal human faces in an image and
     estimate their pose.  The pose takes the form of 68 landmarks.  These are
     points on the face such as the corners of the mouth, along the eyebrows, on
-    the eyes, and so forth.  
-    
+    the eyes, and so forth.
+
 
     This example is essentially just a version of the face_landmark_detection_ex.cpp
-    example modified to use OpenCV's VideoCapture object to read from a camera instead 
+    example modified to use OpenCV's VideoCapture object to read from a camera instead
     of files.
 
 
@@ -24,7 +24,7 @@
     Studio, or the Intel compiler.  If you are using another compiler then you
     need to consult your compiler's manual to determine how to enable these
     instructions.  Note that AVX is the fastest but requires a CPU from at least
-    2011.  SSE4 is the next fastest and is supported by most current machines.  
+    2011.  SSE4 is the next fastest and is supported by most current machines.
 */
 
 #include <dlib/opencv.h>
@@ -33,12 +33,23 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
+#include <list>
 
 using namespace dlib;
 using namespace std;
 
+
+void featuresExtraction(full_object_detection shape,list<float> *lx,
+                        list<float> *ly)
+{
+    for (int i = 0; i < shape.num_parts(); ++i){
+        lx->push_back( (float) shape.part(i).x() );
+        ly->push_back( (float) shape.part(i).y() );
+    }
+}
 int main()
 {
+    std::list<float> lx,ly;
     try
     {
         cv::VideoCapture cap(0);
@@ -69,17 +80,29 @@ int main()
             // while using cimg.
             cv_image<bgr_pixel> cimg(temp);
 
-            // Detect faces 
+            // Detect faces
             std::vector<rectangle> faces = detector(cimg);
             // Find the pose of each face.
             std::vector<full_object_detection> shapes;
-            for (unsigned long i = 0; i < faces.size(); ++i)
+            for (unsigned long i = 0; i < faces.size(); ++i){
                 shapes.push_back(pose_model(cimg, faces[i]));
+                featuresExtraction(shapes[i],&lx,&ly);
+            }
+
+
 
             // Display it all on the screen
             win.clear_overlay();
             win.set_image(cimg);
             win.add_overlay(render_face_detections(shapes));
+
+            // cout<<"Vetor de landmarks: ";
+
+            // for (int i = 0,j=0; i < lx.size() && j < ly.size(); ++i,j++){
+            //     cout<<"("<<i<<","<<j<<"), ";
+            // }
+
+            // cout<<" "<<endl;
         }
     }
     catch(serialization_error& e)
