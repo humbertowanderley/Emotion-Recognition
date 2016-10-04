@@ -29,7 +29,7 @@ MACRO(add_example name)
    TARGET_LINK_LIBRARIES(${name} dlib )
 ENDMACRO()
 
-# The deep learning toolkit requires a C++11 capable compiler.  
+# The deep learning toolkit requires a C++11 capable compiler.
 if (COMPILER_CAN_DO_CPP_11)
 #   add_example(dnn_introduction_ex)
 #   add_example(dnn_introduction2_ex)
@@ -40,7 +40,7 @@ if (COMPILER_CAN_DO_CPP_11)
 #   add_example(random_cropper_ex)
 endif()
 
-#here we apply our macros 
+#here we apply our macros
 #add_example(3d_point_cloud_ex)
 #add_example(bayes_net_ex)
 #add_example(bayes_net_from_disk_ex)
@@ -128,8 +128,8 @@ find_package(OpenCV QUIET)
 if (OpenCV_FOUND)
    include_directories(${OpenCV_INCLUDE_DIRS})
 
-#   ADD_EXECUTABLE(webcam_face_pose_ex webcam_face_pose_ex.cpp)
-#   TARGET_LINK_LIBRARIES(webcam_face_pose_ex dlib ${OpenCV_LIBS} )
+   ADD_EXECUTABLE(webcam_face_pose_ex webcam_face_pose_ex.cpp)
+   TARGET_LINK_LIBRARIES(webcam_face_pose_ex dlib ${OpenCV_LIBS} )
 else()
    message("OpenCV not found, so we won't build the webcam_face_pose_ex example.")
 endif()

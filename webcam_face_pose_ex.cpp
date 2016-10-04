@@ -38,11 +38,27 @@
 using namespace dlib;
 using namespace std;
 
+double length(point a,point b)
+{
+    int x1,y1,x2,y2;
+    double dist;
+    x1 = a.x();
+    y1 = a.y();
+    x2 = b.x();
+    y2 = b.y();
 
-void featuresExtraction(full_object_detection shape, pair<float,float> *l)
+    dist = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);
+    dist = sqrt(dist);
+    return dist;
+}
+
+void featuresExtraction(full_object_detection shape,std::vector<float> vx,
+                        std::vector<float> vy)
 {
     for (int i = 0; i < shape.num_parts(); ++i){
-        l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
+        // l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
+        vx[i] = (float)shape.part(i).x();
+        vy[i] = (float)shape.part(i).y();
     }
 }
 
@@ -50,7 +66,7 @@ int main()
 {
 
     cv::Mat temp;
-    pair<float,float> landmarks[68];
+    std::vector<float> vx,vy;
     pair<float,float> norm[68];
     try
     {
@@ -88,7 +104,7 @@ int main()
             std::vector<full_object_detection> shapes;
             for (unsigned long i = 0; i < faces.size(); ++i){
                 shapes.push_back(pose_model(cimg, faces[i]));
-                featuresExtraction(shapes[i],landmarks);
+                featuresExtraction(shapes[i],vx,vy);
             }
 
 
@@ -101,7 +117,7 @@ int main()
             cout<<"Vetor de landmarks: ";
 
             for (int i = 0; i < 68 ; ++i){
-                cout<<"("<<landmarks[i].first<<","<<landmarks[i].second<<"), ";
+                cout<<"("<<vx[i]<<","<<vy[i]<<"), ";
                 // norm[i] = (landmarks[i]-min(landmarks))/(max(landmarks)-min(landmarks)) ;
             }
 
