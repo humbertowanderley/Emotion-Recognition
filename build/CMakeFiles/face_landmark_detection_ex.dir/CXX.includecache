@@ -7248,7 +7248,7 @@ vector
 platform.h
 ../dlib/../dlib/platform.h
 
-/home/hawn/Downloads/Emotion-Recognition/face_landmark_detection_ex.cpp
+/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/face_landmark_detection_ex.cpp
 dlib/image_processing/frontal_face_detector.h
 -
 dlib/image_processing/render_face_detections.h

@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o"
   "CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o"
   "CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o"
@@ -58,6 +58,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/dlib.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/dlib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

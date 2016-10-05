@@ -1,4 +1,4 @@
-The system is: Linux - 4.4.0-38-generic - x86_64
+The system is: Linux - 3.19.0-65-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,80 +23,74 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_31c75/fast"
-/usr/bin/make -f CMakeFiles/cmTC_31c75.dir/build.make CMakeFiles/cmTC_31c75.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_31c75.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_31c75.dir/testCCompiler.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_31c75
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31c75.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_31c75.dir/testCCompiler.c.o  -o cmTC_31c75 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec4214113811/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4214113811.dir/build.make CMakeFiles/cmTryCompileExec4214113811.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4214113811.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4214113811.dir/testCCompiler.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec4214113811
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4214113811.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4214113811.dir/testCCompiler.c.o  -o cmTryCompileExec4214113811 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5be1a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5be1a.dir/build.make CMakeFiles/cmTC_5be1a.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_5be1a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5be1a.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o  -o cmTC_5be1a -rdynamic  
+Run Build Command:/usr/bin/make "cmTryCompileExec734460329/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec734460329.dir/build.make CMakeFiles/cmTryCompileExec734460329.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec734460329
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec734460329.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec734460329 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5be1a' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cchYGq7K.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_5be1a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec734460329' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec734460329 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5be1a/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5be1a.dir/build.make CMakeFiles/cmTC_5be1a.dir/build]
-  ignore line: [make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_5be1a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5be1a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o  -o cmTC_5be1a -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec734460329/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec734460329.dir/build.make CMakeFiles/cmTryCompileExec734460329.dir/build]
+  ignore line: [make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec734460329]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec734460329.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec734460329 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
   ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5be1a' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cchYGq7K.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_5be1a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cchYGq7K.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+  ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec734460329' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec734460329 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -109,19 +103,19 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5be1a] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [cmTryCompileExec734460329] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib]
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_5be1a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
+    arg [CMakeFiles/cmTryCompileExec734460329.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -131,157 +125,91 @@ Parsed C implicit link information from above output:
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [--no-as-needed] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
   remove lib [gcc]
   remove lib [gcc_s]
   remove lib [gcc]
   remove lib [gcc_s]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8] ==> [/usr/lib/gcc/x86_64-linux-gnu/4.8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib] ==> [/usr/lib]
   collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
   collapse library dir [/lib/../lib] ==> [/lib]
   collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> [/usr/lib]
   implicit libs: [c]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/4.8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 
-
-
-Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_42a95/fast"
-/usr/bin/make -f CMakeFiles/cmTC_42a95.dir/build.make CMakeFiles/cmTC_42a95.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_42a95.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_42a95.dir/feature_tests.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_42a95
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42a95.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_42a95.dir/feature_tests.c.o  -o cmTC_42a95 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:1c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_21cd4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_21cd4.dir/build.make CMakeFiles/cmTC_21cd4.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_21cd4.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_21cd4.dir/feature_tests.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_21cd4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21cd4.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_21cd4.dir/feature_tests.c.o  -o cmTC_21cd4 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_75d40/fast"
-/usr/bin/make -f CMakeFiles/cmTC_75d40.dir/build.make CMakeFiles/cmTC_75d40.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_75d40.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_75d40.dir/feature_tests.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_75d40
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75d40.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_75d40.dir/feature_tests.c.o  -o cmTC_75d40 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:0c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cb839/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cb839.dir/build.make CMakeFiles/cmTC_cb839.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cb839.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_cb839.dir/testCXXCompiler.cxx.o -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_cb839
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb839.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_cb839.dir/testCXXCompiler.cxx.o  -o cmTC_cb839 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec55422794/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec55422794.dir/build.make CMakeFiles/cmTryCompileExec55422794.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec55422794.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec55422794.dir/testCXXCompiler.cxx.o -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec55422794
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec55422794.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec55422794.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec55422794 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d3f95/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d3f95.dir/build.make CMakeFiles/cmTC_d3f95.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d3f95
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3f95.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3f95 -rdynamic  
+Run Build Command:/usr/bin/make "cmTryCompileExec255282668/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec255282668.dir/build.make CMakeFiles/cmTryCompileExec255282668.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec255282668
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec255282668.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec255282668 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3f95' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHwFfJu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3f95 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec255282668' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec255282668 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d3f95/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d3f95.dir/build.make CMakeFiles/cmTC_d3f95.dir/build]
-  ignore line: [make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d3f95]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3f95.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3f95 -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec255282668/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec255282668.dir/build.make CMakeFiles/cmTryCompileExec255282668.dir/build]
+  ignore line: [make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec255282668]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec255282668.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec255282668 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
   ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.2) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3f95' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHwFfJu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3f95 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccHwFfJu.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+  ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec255282668' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec255282668 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -294,19 +222,19 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d3f95] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [cmTryCompileExec255282668] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib]
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_d3f95.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
+    arg [CMakeFiles/cmTryCompileExec255282668.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -314,437 +242,247 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
   remove lib [gcc_s]
   remove lib [gcc]
   remove lib [gcc_s]
   remove lib [gcc]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8] ==> [/usr/lib/gcc/x86_64-linux-gnu/4.8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib] ==> [/usr/lib]
   collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
   collapse library dir [/lib/../lib] ==> [/lib]
   collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> [/usr/lib]
   implicit libs: [stdc++;m;c]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/4.8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-
-Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_3059d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3059d.dir/build.make CMakeFiles/cmTC_3059d.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3059d.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_3059d.dir/feature_tests.cxx.o -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3059d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3059d.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_3059d.dir/feature_tests.cxx.o  -o cmTC_3059d -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_90679/fast"
-/usr/bin/make -f CMakeFiles/cmTC_90679.dir/build.make CMakeFiles/cmTC_90679.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_90679.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_90679.dir/feature_tests.cxx.o -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_90679
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90679.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_90679.dir/feature_tests.cxx.o  -o cmTC_90679 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_deb01/fast"
-/usr/bin/make -f CMakeFiles/cmTC_deb01.dir/build.make CMakeFiles/cmTC_deb01.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_deb01.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_deb01.dir/feature_tests.cxx.o -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_deb01
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_deb01.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_deb01.dir/feature_tests.cxx.o  -o cmTC_deb01 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:0cxx_alias_templates
-    Feature record: CXX_FEATURE:0cxx_alignas
-    Feature record: CXX_FEATURE:0cxx_alignof
-    Feature record: CXX_FEATURE:0cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:0cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:0cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:0cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:0cxx_default_function_template_args
-    Feature record: CXX_FEATURE:0cxx_defaulted_functions
-    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:0cxx_delegating_constructors
-    Feature record: CXX_FEATURE:0cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:0cxx_explicit_conversions
-    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:0cxx_extern_templates
-    Feature record: CXX_FEATURE:0cxx_final
-    Feature record: CXX_FEATURE:0cxx_func_identifier
-    Feature record: CXX_FEATURE:0cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:0cxx_inline_namespaces
-    Feature record: CXX_FEATURE:0cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:0cxx_local_type_template_args
-    Feature record: CXX_FEATURE:0cxx_long_long_type
-    Feature record: CXX_FEATURE:0cxx_noexcept
-    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:0cxx_nullptr
-    Feature record: CXX_FEATURE:0cxx_override
-    Feature record: CXX_FEATURE:0cxx_range_for
-    Feature record: CXX_FEATURE:0cxx_raw_string_literals
-    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:0cxx_rvalue_references
-    Feature record: CXX_FEATURE:0cxx_sizeof_member
-    Feature record: CXX_FEATURE:0cxx_static_assert
-    Feature record: CXX_FEATURE:0cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:0cxx_thread_local
-    Feature record: CXX_FEATURE:0cxx_trailing_return_types
-    Feature record: CXX_FEATURE:0cxx_unicode_literals
-    Feature record: CXX_FEATURE:0cxx_uniform_initialization
-    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:0cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:0cxx_variadic_macros
-    Feature record: CXX_FEATURE:0cxx_variadic_templates
-Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_1ed28/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ed28.dir/build.make CMakeFiles/cmTC_1ed28.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ed28.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_1ed28.dir/CheckIncludeFile.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_1ed28
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ed28.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_1ed28.dir/CheckIncludeFile.c.o  -o cmTC_1ed28 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2447697439/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2447697439.dir/build.make CMakeFiles/cmTryCompileExec2447697439.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2447697439.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2447697439.dir/CheckIncludeFiles.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2447697439
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2447697439.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2447697439.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2447697439 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_50469/fast"
-/usr/bin/make -f CMakeFiles/cmTC_50469.dir/build.make CMakeFiles/cmTC_50469.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_50469.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_50469.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_50469
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50469.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_50469.dir/CheckFunctionExists.c.o  -o cmTC_50469 -rdynamic -lpthread 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2944947324/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2944947324.dir/build.make CMakeFiles/cmTryCompileExec2944947324.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2944947324.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2944947324.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2944947324
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2944947324.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2944947324.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2944947324 -rdynamic -lpthread 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_474f8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_474f8.dir/build.make CMakeFiles/cmTC_474f8.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_474f8.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_474f8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_474f8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_474f8.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_474f8.dir/CheckFunctionExists.c.o  -o cmTC_474f8 -rdynamic /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec1133396703/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1133396703.dir/build.make CMakeFiles/cmTryCompileExec1133396703.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1133396703.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec1133396703.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1133396703
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1133396703.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec1133396703.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1133396703 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_27ee5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_27ee5.dir/build.make CMakeFiles/cmTC_27ee5.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_27ee5.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_27ee5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_27ee5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27ee5.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_27ee5.dir/CheckFunctionExists.c.o  -o cmTC_27ee5 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3846300712/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3846300712.dir/build.make CMakeFiles/cmTryCompileExec3846300712.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3846300712.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3846300712.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3846300712
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3846300712.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3846300712.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3846300712 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_df92a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_df92a.dir/build.make CMakeFiles/cmTC_df92a.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_df92a.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_df92a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_df92a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df92a.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_df92a.dir/CheckFunctionExists.c.o  -o cmTC_df92a -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2880743792/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2880743792.dir/build.make CMakeFiles/cmTryCompileExec2880743792.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2880743792.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec2880743792.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2880743792
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2880743792.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec2880743792.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2880743792 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d4ebf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d4ebf.dir/build.make CMakeFiles/cmTC_d4ebf.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d4ebf.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_d4ebf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d4ebf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4ebf.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_d4ebf.dir/CheckFunctionExists.c.o  -o cmTC_d4ebf -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec938327178/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec938327178.dir/build.make CMakeFiles/cmTryCompileExec938327178.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec938327178.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec938327178.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec938327178
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec938327178.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec938327178.dir/CheckFunctionExists.c.o  -o cmTryCompileExec938327178 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0458f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0458f.dir/build.make CMakeFiles/cmTC_0458f.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0458f.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_0458f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0458f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0458f.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_0458f.dir/CheckFunctionExists.c.o  -o cmTC_0458f -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec1496297390/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1496297390.dir/build.make CMakeFiles/cmTryCompileExec1496297390.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1496297390.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec1496297390.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1496297390
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1496297390.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec1496297390.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1496297390 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ef512/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ef512.dir/build.make CMakeFiles/cmTC_ef512.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ef512.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_ef512.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ef512
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef512.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_ef512.dir/CheckFunctionExists.c.o  -o cmTC_ef512 -rdynamic -lICE 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3647596714/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3647596714.dir/build.make CMakeFiles/cmTryCompileExec3647596714.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3647596714.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3647596714.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3647596714
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3647596714.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3647596714.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3647596714 -rdynamic -lICE 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function png_create_read_struct exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2170b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2170b.dir/build.make CMakeFiles/cmTC_2170b.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2170b.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTC_2170b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2170b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2170b.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct    CMakeFiles/cmTC_2170b.dir/CheckFunctionExists.c.o  -o cmTC_2170b -rdynamic /usr/lib/x86_64-linux-gnu/libpng.so 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2053362546/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2053362546.dir/build.make CMakeFiles/cmTryCompileExec2053362546.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2053362546.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTryCompileExec2053362546.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2053362546
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2053362546.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct    CMakeFiles/cmTryCompileExec2053362546.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2053362546 -rdynamic -lpng 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function jpeg_read_header exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f0320/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f0320.dir/build.make CMakeFiles/cmTC_f0320.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f0320.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTC_f0320.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_f0320
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0320.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header    CMakeFiles/cmTC_f0320.dir/CheckFunctionExists.c.o  -o cmTC_f0320 -rdynamic /usr/lib/x86_64-linux-gnu/libjpeg.so 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec108429602/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec108429602.dir/build.make CMakeFiles/cmTryCompileExec108429602.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec108429602.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTryCompileExec108429602.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec108429602
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec108429602.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header    CMakeFiles/cmTryCompileExec108429602.dir/CheckFunctionExists.c.o  -o cmTryCompileExec108429602 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file sys/types.h exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_58e89/fast"
-/usr/bin/make -f CMakeFiles/cmTC_58e89.dir/build.make CMakeFiles/cmTC_58e89.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_58e89.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_58e89.dir/CheckIncludeFile.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_58e89
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58e89.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_58e89.dir/CheckIncludeFile.c.o  -o cmTC_58e89 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2542428756/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2542428756.dir/build.make CMakeFiles/cmTryCompileExec2542428756.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2542428756.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2542428756.dir/CheckIncludeFile.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2542428756
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2542428756.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2542428756.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2542428756 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stdint.h exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_51879/fast"
-/usr/bin/make -f CMakeFiles/cmTC_51879.dir/build.make CMakeFiles/cmTC_51879.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_51879.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_51879.dir/CheckIncludeFile.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_51879
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51879.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_51879.dir/CheckIncludeFile.c.o  -o cmTC_51879 -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2210603820/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2210603820.dir/build.make CMakeFiles/cmTryCompileExec2210603820.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2210603820.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2210603820.dir/CheckIncludeFile.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2210603820
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2210603820.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2210603820.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2210603820 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stddef.h exists passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a617c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a617c.dir/build.make CMakeFiles/cmTC_a617c.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a617c.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_a617c.dir/CheckIncludeFile.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_a617c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a617c.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_a617c.dir/CheckIncludeFile.c.o  -o cmTC_a617c -rdynamic 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec2738325463/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2738325463.dir/build.make CMakeFiles/cmTryCompileExec2738325463.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2738325463.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2738325463.dir/CheckIncludeFile.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2738325463
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2738325463.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2738325463.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2738325463 -rdynamic 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 
 Determining size of void* passed with the following output:
-Change Dir: /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6c5f7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6c5f7.dir/build.make CMakeFiles/cmTC_6c5f7.dir/build
-make[1]: Entering directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6c5f7.dir/SIZE_OF_VOID_PTR.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_6c5f7.dir/SIZE_OF_VOID_PTR.c.o   -c /home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
-Linking C executable cmTC_6c5f7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c5f7.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_6c5f7.dir/SIZE_OF_VOID_PTR.c.o  -o cmTC_6c5f7 -rdynamic /usr/lib/x86_64-linux-gnu/libjpeg.so 
-make[1]: Leaving directory '/home/hawn/Downloads/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec3927349665/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3927349665.dir/build.make CMakeFiles/cmTryCompileExec3927349665.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3927349665.dir/SIZE_OF_VOID_PTR.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3927349665.dir/SIZE_OF_VOID_PTR.c.o   -c /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+Linking C executable cmTryCompileExec3927349665
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3927349665.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3927349665.dir/SIZE_OF_VOID_PTR.c.o  -o cmTryCompileExec3927349665 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cblas_ddot exists passed with the following output:
+Change Dir: /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2621155029/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2621155029.dir/build.make CMakeFiles/cmTryCompileExec2621155029.dir/build
+make[1]: Entering directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2621155029.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_ddot   -o CMakeFiles/cmTryCompileExec2621155029.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2621155029
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2621155029.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cblas_ddot    CMakeFiles/cmTryCompileExec2621155029.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2621155029 -rdynamic -latlas -lcblas 
+make[1]: Leaving directory `/home/rhpr/Documentos/UFPE/RV/Emotion-Recognition/build/CMakeFiles/CMakeTmp'
 
 

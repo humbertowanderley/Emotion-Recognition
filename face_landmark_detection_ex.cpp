@@ -4,8 +4,8 @@
     This example program shows how to find frontal human faces in an image and
     estimate their pose.  The pose takes the form of 68 landmarks.  These are
     points on the face such as the corners of the mouth, along the eyebrows, on
-    the eyes, and so forth.  
-    
+    the eyes, and so forth.
+
 
 
     This face detector is made using the classic Histogram of Oriented
@@ -14,12 +14,12 @@
     using dlib's implementation of the paper:
         One Millisecond Face Alignment with an Ensemble of Regression Trees by
         Vahid Kazemi and Josephine Sullivan, CVPR 2014
-    and was trained on the iBUG 300-W face landmark dataset.  
+    and was trained on the iBUG 300-W face landmark dataset.
 
     Also, note that you can train your own models using dlib's machine learning
     tools.  See train_shape_predictor_ex.cpp to see an example.
 
-    
+
 
 
     Finally, note that the face detector is fastest when compiled with at least
@@ -34,7 +34,7 @@
     Studio, or the Intel compiler.  If you are using another compiler then you
     need to consult your compiler's manual to determine how to enable these
     instructions.  Note that AVX is the fastest but requires a CPU from at least
-    2011.  SSE4 is the next fastest and is supported by most current machines.  
+    2011.  SSE4 is the next fastest and is supported by most current machines.
 */
 
 
@@ -69,20 +69,24 @@ float media(float* array, int tamanho)
 }
 
 void desenharPontos(full_object_detection shape, array2d<rgb_pixel> *imagem, point gravidade)
-{	
+{
 	if(gravidade.x() > 0 && gravidade.y() > 0)
 	{
-		
+
 		for(int i = 0; i < shape.num_parts(); i++)
 		{
 			//desenha landmarks
 			draw_solid_circle (*imagem, shape.part(i),4, rgb_pixel(0,255,0));
 			//desenha linhas entre o ponto de gravidade e os landmarks
-			draw_line(*imagem, gravidade, shape.part(i), rgb_pixel(255,0,0));
+//			draw_line(*imagem, gravidade, shape.part(i), rgb_pixel(255,0,0));
 		}
 		//desenha ponto de gravidade
-		draw_solid_circle (*imagem, gravidade,4, rgb_pixel(0,0,255));
-	}
+//		draw_solid_circle (*imagem, gravidade,4, rgb_pixel(0,0,255));
+        draw_solid_circle (*imagem, shape.part(48),4, rgb_pixel(255,0,0));
+        draw_solid_circle (*imagem, shape.part(54),4, rgb_pixel(255,0,0));
+
+        draw_solid_circle (*imagem, shape.part(60),4, rgb_pixel(255,0,0));
+    }
 }
 
 void extrairCaracteristicas(full_object_detection shape, float* landmarks, point* pontoDeGravidade, float* landmarks_vetorizada)
@@ -94,7 +98,7 @@ void extrairCaracteristicas(full_object_detection shape, float* landmarks, point
 	float distancia_x_Centro[68];
 	float distancia_y_Centro[68];
 
-	
+
 
 	float xMax, xMin, yMax, yMin;
 
@@ -153,18 +157,18 @@ void extrairCaracteristicas(full_object_detection shape, float* landmarks, point
 
     cout << " landmarks vetorizada: " << endl;
     cont = 1;
-    
+
     for(int i = 0; i < 272; i++)
     {
     	if(i%4 == 0)
-    	{ 
+    	{
     		cout << endl << "Parte " << cont << ": " << endl;
     		cont++;
     	}
 
     	cout << landmarks_vetorizada[i] << " ";
-    	
-    	
+
+
 
     }
 }
@@ -173,7 +177,7 @@ void extrairCaracteristicas(full_object_detection shape, float* landmarks, point
 
 int main(int argc, char** argv)
 {
-	float landmarks_vetorizada[272];  
+	float landmarks_vetorizada[272];
 	float landmarks[136];
 	point pontoDeGravidade = point(0,0);
 	float mediaX = 0, mediaY = 0;
@@ -224,7 +228,7 @@ int main(int argc, char** argv)
             for (unsigned long j = 0; j < dets.size(); ++j)
             {
                 full_object_detection shape = sp(img, dets[j]);
-              
+
               	if(shape.num_parts() > 0)
               	{
         			extrairCaracteristicas(shape, landmarks, &pontoDeGravidade, landmarks_vetorizada);
@@ -232,14 +236,14 @@ int main(int argc, char** argv)
               	}
 
 
-           	          
+
                 // You get the idea, you can get all the face part locations if
                 // you want them.  Here we just store them in shapes so we can
                 // put them on the screen.
                 shapes.push_back(shape);
             }
-           
-    
+
+
             // Now let's view our face poses on the screen.
             win.clear_overlay();
             win.set_image(img);
@@ -250,7 +254,7 @@ int main(int argc, char** argv)
             dlib::array<array2d<rgb_pixel> > face_chips;
             extract_image_chips(img, get_face_chip_details(shapes), face_chips);
             win_faces.set_image(tile_images(face_chips));
-            
+
   			cout << endl << "Vetor de landmarks: ";
             for(int i = 0; i < 136; i++)
             {
