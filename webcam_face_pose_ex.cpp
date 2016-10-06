@@ -43,24 +43,56 @@ double length(point a,point b)
     return sqrt( (a.x()-b.x())*(a.x()-b.x()) + (a.y()-b.y())*(a.y()-b.y()) );
 }
 //Features
-double openessMouth(full_object_detection shape)
+double openessMouth(full_object_detection shape)    //33 - happy
 {
     return length(shape.part(51),shape.part(57));
 }
 
-double widthMouth(full_object_detection shape)
+double widthMouth(full_object_detection shape)      //
 {
     return length(shape.part(48),shape.part(54));
 }
 
-void featuresExtraction(full_object_detection shape,std::vector<float> vx,
-                        std::vector<float> vy)
+double widthEye(full_object_detection shape)      //
 {
-    for (int i = 0; i < shape.num_parts(); ++i){
+    return length(shape.part(36),shape.part(39))/2.0 + length(shape.part(42),
+        shape.part(45))/2.0;
+}
+
+double heigthEyebrow1(full_object_detection shape)      //
+
+    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),
+        shape.part(26))/2.0;
+}
+
+double heigthEyebrow2(full_object_detection shape)      //
+{
+    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),
+        shape.part(22))/2.0;
+}
+
+double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
+{
+    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),shape.part(22))/2.0;
+}
+
+//Other things
+std::vector<float> featuresExtraction(full_object_detection shape)
+{
+    std::vector<float> features;
+    for (int i = 0; i < shape.num_parts(); ++i)
+    {
         // l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
-        vx[i] = (float)shape.part(i).x();
-        vy[i] = (float)shape.part(i).y();
+        features.push_back(openessMouth(shape[i]));
+        features.push_back(widthMouth(shape[i]));
+        features.push_back(widthEye(shape[i]));
+        features.push_back(heigthEyebrow1(shape[i]));
+        features.push_back(heigthEyebrow2(shape[i]));
+        features.push_back(tipLip_nose(shape[i]));
+        features.push_back(-1.0);
     }
+
+    return features;
 }
 
 //função usada como debug para descobrir onde estão os pontos
@@ -72,9 +104,10 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
         draw_solid_circle (*imagem, shape.part(i),2, rgb_pixel(0,255,0));
     }
 
-    draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(60),2, rgb_pixel(255,0,0));
+    //draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
+    //draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(36),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(39),2, rgb_pixel(255,0,0));
 }
 
 
@@ -82,8 +115,7 @@ int main()
 {
 
     cv::Mat temp;
-    std::vector<float> vx,vy;
-    pair<float,float> norm[68];
+
     try
     {
         cv::VideoCapture cap(0);
@@ -118,10 +150,13 @@ int main()
             // Find the pose of each face.]
 
             std::vector<full_object_detection> shapes;
-            for (unsigned long i = 0; i < faces.size(); ++i){
+            for (unsigned long i = 0; i < faces.size(); ++i)
+            {
                 shapes.push_back(pose_model(cimg, faces[i]));
                 drawPoints(shapes[i],&cimg);
-                //featuresExtraction(shapes[i],vx,vy);
+                //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
+                //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
+                //featuresExtraction(shapes[i]);
             }
 
 
@@ -129,8 +164,7 @@ int main()
             // Display it all on the screen
             win.clear_overlay();
             win.set_image(cimg);
-            win.add_overlay(render_face_detections(shapes));
-
+            //win.add_overlay(render_face_detections(shapes));
            /* cout<<"Vetor de landmarks: ";
 
             for (int i = 0; i < 68 ; ++i){
