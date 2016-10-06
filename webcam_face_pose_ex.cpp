@@ -33,7 +33,7 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
-#include <utility>
+#include <fstream>
 
 using namespace dlib;
 using namespace std;
@@ -55,44 +55,70 @@ double widthMouth(full_object_detection shape)      //
 
 double widthEye(full_object_detection shape)      //
 {
-    return length(shape.part(36),shape.part(39))/2.0 + length(shape.part(42),
+    return length(shape.part(36),shape.part(39))/2.0 + length(shape.part(42),\
         shape.part(45))/2.0;
 }
 
 double heigthEyebrow1(full_object_detection shape)      //
-
-    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),
+{
+    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),\
         shape.part(26))/2.0;
 }
 
 double heigthEyebrow2(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),
+    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
         shape.part(22))/2.0;
 }
 
 double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
 {
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),shape.part(22))/2.0;
+    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
+        shape.part(22))/2.0;
 }
 
 //Other things
-std::vector<float> featuresExtraction(full_object_detection shape)
+std::vector<double> featuresExtraction(full_object_detection shape)
 {
-    std::vector<float> features;
-    for (int i = 0; i < shape.num_parts(); ++i)
-    {
+    std::vector<double> features;
+    for (int i = 0; i < shape.num_parts(); ++i){
         // l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
-        features.push_back(openessMouth(shape[i]));
-        features.push_back(widthMouth(shape[i]));
-        features.push_back(widthEye(shape[i]));
-        features.push_back(heigthEyebrow1(shape[i]));
-        features.push_back(heigthEyebrow2(shape[i]));
-        features.push_back(tipLip_nose(shape[i]));
+        features.push_back(openessMouth(shape));
+        features.push_back(widthMouth(shape));
+        features.push_back(widthEye(shape));
+        features.push_back(heigthEyebrow1(shape));
+        features.push_back(heigthEyebrow2(shape));
+        features.push_back(tipLip_nose(shape));
         features.push_back(-1.0);
     }
 
     return features;
+}
+
+void createSpread(full_object_detection shape)
+{
+    ofstream file_descriptor;
+    static bool flag =true;
+
+    file_descriptor.open("features.xls",ios::app);
+    if (flag){
+        file_descriptor<<"Openess Mouth\tWidth Mouth\tWidth Eye\t heigthEyebrow1\
+        \theigthEyebrow2\t tipLip_nose\n";
+        flag = false;
+    }
+
+    std::vector<double> feat = featuresExtraction(shape);
+    for (int i = 0; i < feat.size(); ++i){
+        cout<<feat[i]<<" ";
+        if ( feat[i] >= 0 )
+            file_descriptor<<feat[i]<<"\t";
+        else{
+            cout<<endl;
+            file_descriptor<<"\n";
+        }
+    }
+    file_descriptor.close();
+
 }
 
 //função usada como debug para descobrir onde estão os pontos
@@ -154,6 +180,7 @@ int main()
             {
                 shapes.push_back(pose_model(cimg, faces[i]));
                 drawPoints(shapes[i],&cimg);
+                createSpread(shapes[i]);
                 //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
                 //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
                 //featuresExtraction(shapes[i]);
@@ -172,7 +199,6 @@ int main()
                 // norm[i] = (landmarks[i]-min(landmarks))/(max(landmarks)-min(landmarks)) ;
             }
 */
-            cout<<" "<<endl;
         }
     }
     catch(serialization_error& e)
