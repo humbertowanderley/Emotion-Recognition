@@ -40,16 +40,17 @@ using namespace std;
 
 double length(point a,point b)
 {
-    int x1,y1,x2,y2;
-    double dist;
-    x1 = a.x();
-    y1 = a.y();
-    x2 = b.x();
-    y2 = b.y();
+    return sqrt( (a.x()-b.x())*(a.x()-b.x()) + (a.y()-b.y())*(a.y()-b.y()) );
+}
+//Features
+double openessMouth(full_object_detection shape)
+{
+    return length(shape.part(51),shape.part(57));
+}
 
-    dist = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);
-    dist = sqrt(dist);
-    return dist;
+double widthMouth(full_object_detection shape)
+{
+    return length(shape.part(48),shape.part(54));
 }
 
 void featuresExtraction(full_object_detection shape,std::vector<float> vx,
@@ -61,6 +62,21 @@ void featuresExtraction(full_object_detection shape,std::vector<float> vx,
         vy[i] = (float)shape.part(i).y();
     }
 }
+
+//função usada como debug para descobrir onde estão os pontos
+void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
+{
+    for(int i = 0; i < shape.num_parts(); i++)
+    {
+        //desenha landmarks
+        draw_solid_circle (*imagem, shape.part(i),2, rgb_pixel(0,255,0));
+    }
+
+    draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(60),2, rgb_pixel(255,0,0));
+}
+
 
 int main()
 {
@@ -104,7 +120,8 @@ int main()
             std::vector<full_object_detection> shapes;
             for (unsigned long i = 0; i < faces.size(); ++i){
                 shapes.push_back(pose_model(cimg, faces[i]));
-                featuresExtraction(shapes[i],vx,vy);
+                drawPoints(shapes[i],&cimg);
+                //featuresExtraction(shapes[i],vx,vy);
             }
 
 
@@ -114,13 +131,13 @@ int main()
             win.set_image(cimg);
             win.add_overlay(render_face_detections(shapes));
 
-            cout<<"Vetor de landmarks: ";
+           /* cout<<"Vetor de landmarks: ";
 
             for (int i = 0; i < 68 ; ++i){
                 cout<<"("<<vx[i]<<","<<vy[i]<<"), ";
                 // norm[i] = (landmarks[i]-min(landmarks))/(max(landmarks)-min(landmarks)) ;
             }
-
+*/
             cout<<" "<<endl;
         }
     }
