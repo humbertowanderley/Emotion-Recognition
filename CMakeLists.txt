@@ -134,6 +134,11 @@ else()
    message("OpenCV not found, so we won't build the webcam_face_pose_ex example.")
 endif()
 
+find_package(OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
 
 if (DLIB_LINK_WITH_SQLITE3)
 #   add_example(sqlite_ex)

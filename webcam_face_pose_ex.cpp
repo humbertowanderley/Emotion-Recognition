@@ -33,10 +33,13 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
-#include <fstream>
+#include <omp.h>
 
 using namespace dlib;
 using namespace std;
+
+#define BUFFER_SIZE 5
+
 
 double length(point a,point b)
 {
@@ -67,8 +70,8 @@ double heigthEyebrow1(full_object_detection shape)      //
 
 double heigthEyebrow2(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
-        shape.part(22))/2.0;
+    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
+        shape.part(54))/2.0;
 }
 
 double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
@@ -78,11 +81,10 @@ double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boc
 }
 
 //Other things
-std::vector<double> featuresExtraction(full_object_detection shape)
+std::vector<double> featuresExtraction(full_object_detection shape,int num_faces)
 {
     std::vector<double> features;
-    for (int i = 0; i < shape.num_parts(); ++i){
-        // l[i] = make_pair((float) shape.part(i).x(),(float) shape.part(i).y());
+    for (int i = 0; i < num_faces; ++i){
         features.push_back(openessMouth(shape));
         features.push_back(widthMouth(shape));
         features.push_back(widthEye(shape));
@@ -91,34 +93,7 @@ std::vector<double> featuresExtraction(full_object_detection shape)
         features.push_back(tipLip_nose(shape));
         features.push_back(-1.0);
     }
-
     return features;
-}
-
-void createSpread(full_object_detection shape)
-{
-    ofstream file_descriptor;
-    static bool flag =true;
-
-    file_descriptor.open("features.xls",ios::app);
-    if (flag){
-        file_descriptor<<"Openess Mouth\tWidth Mouth\tWidth Eye\t heigthEyebrow1\
-        \theigthEyebrow2\t tipLip_nose\n";
-        flag = false;
-    }
-
-    std::vector<double> feat = featuresExtraction(shape);
-    for (int i = 0; i < feat.size(); ++i){
-        cout<<feat[i]<<" ";
-        if ( feat[i] >= 0 )
-            file_descriptor<<feat[i]<<"\t";
-        else{
-            cout<<endl;
-            file_descriptor<<"\n";
-        }
-    }
-    file_descriptor.close();
-
 }
 
 //função usada como debug para descobrir onde estão os pontos
@@ -132,16 +107,23 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 
     //draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
     //draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(36),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(39),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
 }
-
 
 int main()
 {
 
     cv::Mat temp;
-
+    std::vector<double> feat;
+    /*Buffer circular que para colocar
+    frames processados pela webcam*/
+    cv::Mat fifo_frame[BUFFER_SIZE];
+    /*
+    ----Variáveis que auxiliam o buffer circular----
+    pos é posição atual que será consumida pela thread
+    ind indica em qual posição será colocado o novo frame*/
+    int pos = 0 ,ind = 0;
     try
     {
         cv::VideoCapture cap(0);
@@ -158,48 +140,61 @@ int main()
         shape_predictor pose_model;
         deserialize("shape_predictor_68_face_landmarks.dat") >> pose_model;
 
-        // Grab and process frames until the main window is closed by the user.
-        while(!win.is_closed())
+
+        // uma nova thread é criada junto a master
+        #pragma omp parallel num_threads(2)
         {
-            // Grab a frame
-            cap >> temp;
-            // Turn OpenCV's Mat into something dlib can deal with.  Note that this just
-            // wraps the Mat object, it doesn't copy anything.  So cimg is only valid as
-            // long as temp is valid.  Also don't do anything to temp that would cause it
-            // to reallocate the memory which stores the image as that will make cimg
-            // contain dangling pointers.  This basically means you shouldn't modify temp
-            // while using cimg.
-            cv_image<bgr_pixel> cimg(temp);
-
-            // Detect faces
-            std::vector<rectangle> faces = detector(cimg);
-            // Find the pose of each face.]
-
-            std::vector<full_object_detection> shapes;
-            for (unsigned long i = 0; i < faces.size(); ++i)
+            //indica qual é a thread. 0->master/producer,1->consumer
+            int me = omp_get_thread_num();
+            while(!win.is_closed())
             {
-                shapes.push_back(pose_model(cimg, faces[i]));
-                drawPoints(shapes[i],&cimg);
-                createSpread(shapes[i]);
-                //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
-                //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
-                //featuresExtraction(shapes[i]);
+                #pragma omp barrier
+                if (!me){       //if it is master and producer
+
+                        cap >> temp;
+                        fifo_frame[ind] = temp;
+                        ind = (ind+1)%BUFFER_SIZE;
+
+                }
+                else{           //if it is the consumer
+                    if (ind > 0){
+
+                        // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
+                        cv_image<bgr_pixel> cimg(fifo_frame[pos]);
+                        pos = (pos+1)%BUFFER_SIZE;
+                        std::vector<rectangle> faces = detector(cimg);
+                        // Find the pose of each face.
+                        std::vector<full_object_detection> shapes;
+                        for (unsigned long i = 0; i < faces.size(); ++i)
+                        {
+                            shapes.push_back(pose_model(cimg, faces[i]));
+                            drawPoints(shapes[i],&cimg);
+                            //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
+                            //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
+                            feat = featuresExtraction(shapes[i],faces.size());
+                        }
+
+                        //print para debug
+                        for (int i = 0; i < feat.size();++i){
+                            cout<<feat[i]<<" ";
+                        }
+
+
+
+                        // Display it all on the screen
+                        win.clear_overlay();
+                        win.set_image(cimg);
+                        //win.add_overlay(render_face_detections(shapes));
+                        // cout<<endl;
+
+                        feat.erase(feat.begin(),feat.begin()+feat.size());
+
+
+                    }
+                }
             }
-
-
-
-            // Display it all on the screen
-            win.clear_overlay();
-            win.set_image(cimg);
-            //win.add_overlay(render_face_detections(shapes));
-           /* cout<<"Vetor de landmarks: ";
-
-            for (int i = 0; i < 68 ; ++i){
-                cout<<"("<<vx[i]<<","<<vy[i]<<"), ";
-                // norm[i] = (landmarks[i]-min(landmarks))/(max(landmarks)-min(landmarks)) ;
-            }
-*/
         }
+
     }
     catch(serialization_error& e)
     {
