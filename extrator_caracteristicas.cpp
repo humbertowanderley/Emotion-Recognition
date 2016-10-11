@@ -4,8 +4,8 @@
     This example program shows how to find frontal human faces in an image and
     estimate their pose.  The pose takes the form of 68 landmarks.  These are
     points on the face such as the corners of the mouth, along the eyebrows, on
-    the eyes, and so forth.  
-    
+    the eyes, and so forth.
+
 
 
     This face detector is made using the classic Histogram of Oriented
@@ -14,12 +14,12 @@
     using dlib's implementation of the paper:
         One Millisecond Face Alignment with an Ensemble of Regression Trees by
         Vahid Kazemi and Josephine Sullivan, CVPR 2014
-    and was trained on the iBUG 300-W face landmark dataset.  
+    and was trained on the iBUG 300-W face landmark dataset.
 
     Also, note that you can train your own models using dlib's machine learning
     tools.  See train_shape_predictor_ex.cpp to see an example.
 
-    
+
 
 
     Finally, note that the face detector is fastest when compiled with at least
@@ -34,7 +34,7 @@
     Studio, or the Intel compiler.  If you are using another compiler then you
     need to consult your compiler's manual to determine how to enable these
     instructions.  Note that AVX is the fastest but requires a CPU from at least
-    2011.  SSE4 is the next fastest and is supported by most current machines.  
+    2011.  SSE4 is the next fastest and is supported by most current machines.
 */
 
 
@@ -85,8 +85,8 @@ double heigthEyebrow1(full_object_detection shape)      //
 
 double heigthEyebrow2(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
-        shape.part(22))/2.0;
+    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
+        shape.part(54))/2.0;
 }
 
 double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
@@ -111,7 +111,7 @@ std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes
 	    features.push_back(-1.0);
 
     }
-    
+
     return features;
 }
 
@@ -123,9 +123,9 @@ void createSpread()
 
     if (file_descriptor.is_open() && file_descriptor.good())
     {
-    	
+
         file_descriptor << "Openess Mouth\tWidth Mouth\tWidth Eye\t heigthEyebrow1\theigthEyebrow2\t tipLip_nose\tClass\n";
-       
+
     }
     else
     {
@@ -137,10 +137,10 @@ void createSpread()
 }
 
 //insert a new feature line in file
-void updateSpread(std::vector<double> feat, int feat_class)	
+void updateSpread(std::vector<double> feat, int feat_class)
 {
 	ofstream file_descriptor;
-	
+
 	file_descriptor.open("../features.xls",ios::app);
 
     if (file_descriptor.is_open() && file_descriptor.good())
@@ -154,7 +154,7 @@ void updateSpread(std::vector<double> feat, int feat_class)
 	        	file_descriptor<<feat_class<<"\t";
 	            file_descriptor<<"\n";
 	        }
-	    }   
+	    }
     }
     else
     {
@@ -174,9 +174,9 @@ std::vector<full_object_detection>  image_processing(string path, shape_predicto
 	try
     {
         detector = get_frontal_face_detector();
-       
+
         cout << "processing image " << path << "...";
-        
+
         load_image(img, path);
         // Make the image larger so we can detect small faces.
         pyramid_up(img);
@@ -186,14 +186,14 @@ std::vector<full_object_detection>  image_processing(string path, shape_predicto
         std::vector<rectangle> dets = detector(img);
         // Now we will go ask the shape_predictor to tell us the pose of
         // each face we detected.
-        
+
         for (unsigned long j = 0; j < dets.size(); ++j)
         {
             full_object_detection shape = sp(img, dets[j]);
             shapes.push_back(shape);
         }
     }
-   
+
     catch (exception& e)
     {
         cout << "\nexception thrown!" << endl;
@@ -207,7 +207,7 @@ std::vector<full_object_detection>  image_processing(string path, shape_predicto
 
 int main(int argc, char** argv)
 {
-	//neutro = 0, feliz = 1, tristeza = 2, surpresa = 3, raiva = 4 
+	//neutro = 0, feliz = 1, tristeza = 2, surpresa = 3, raiva = 4
 	string emotions[5] = {"neutro", "feliz", "tristeza", "surpresa", "raiva"};
 	int log[5] = {0,0,0,0,0};
 	std::vector<full_object_detection> shapes;
@@ -236,13 +236,13 @@ int main(int argc, char** argv)
 
         // We need a face detector.  We will use this to get bounding boxes for
         // each face in an image.
-        
+
         // And we also need a shape_predictor.  This is the tool that will predict face
         // landmark positions given an image and face bounding box.  Here we are just
         // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
         // as a command line argument.
-        
-        deserialize(argv[1]) >> sp;        
+
+        deserialize(argv[1]) >> sp;
         createSpread();
 
 
@@ -270,18 +270,18 @@ int main(int argc, char** argv)
 				}
 			}
 
-			closedir(dir);	
+			closedir(dir);
 		}
 
 		cout << "Finish. " << log[0] + log[1] + log[2] + log[3] + log[4] << " Images processed." <<endl;
 		cout<< "Images for category: " << endl;
 		for(int i = 0; i < 5; i++)
 		{
-			cout << emotions[i] << ": " << log[i] << endl; 
+			cout << emotions[i] << ": " << log[i] << endl;
 		}
 
 	}
-   
+
     catch (exception& e)
     {
         cout << "\nexception thrown!" << endl;
@@ -289,7 +289,7 @@ int main(int argc, char** argv)
         exit(1);
     }
 
-    
+
 }
 
 // ----------------------------------------------------------------------------------------
