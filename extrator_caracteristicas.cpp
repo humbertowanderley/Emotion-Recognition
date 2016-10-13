@@ -85,8 +85,8 @@ double heigthEyebrow1(full_object_detection shape)      //
 
 double heigthEyebrow2(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
-        shape.part(22))/2.0;
+    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
+        shape.part(54))/2.0;
 }
 
 double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
@@ -248,7 +248,7 @@ int main(int argc, char** argv)
 
 		for(int category = 0; category < 5; category++)
 		{
-			// cout << "********Processing " + emotions[category] +  " pictures********" << endl;
+			cout << "********Processing " + emotions[category] +  " pictures********" << endl;
 
 			dir = opendir(("../database/" + emotions[category]).c_str());
 
@@ -264,13 +264,20 @@ int main(int argc, char** argv)
 						++log[category];
 						shapes = image_processing("../database/" + emotions[category] + "/" + fileName, sp);
 						feat = featuresExtraction(shapes);
-						//updateSpread(feat, category);
-						// cout << " done." << endl;
+						updateSpread(feat, category);
+						cout << " done." << endl;
 					}
 				}
 			}
 
 			closedir(dir);
+		}
+
+		cout << "Finish. " << log[0] + log[1] + log[2] + log[3] + log[4] << " Images processed." <<endl;
+		cout<< "Images for category: " << endl;
+		for(int i = 0; i < 5; i++)
+		{
+			cout << emotions[i] << ": " << log[i] << endl;
 		}
         for (int i = 0; i < feat.size(); ++i){
             cout<<feat[i]<<" ";
