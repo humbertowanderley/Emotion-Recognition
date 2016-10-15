@@ -38,7 +38,7 @@
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 5
+#define BUFFER_SIZE 3
 
 
 double length(point a,point b)
@@ -81,16 +81,16 @@ double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boc
 }
 
 //Other things
-std::vector<double> featuresExtraction(full_object_detection shape,int num_faces)
+std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes)
 {
     std::vector<double> features;
-    for (int i = 0; i < num_faces; ++i){
-        features.push_back(openessMouth(shape));
-        features.push_back(widthMouth(shape));
-        features.push_back(widthEye(shape));
-        features.push_back(heigthEyebrow1(shape));
-        features.push_back(heigthEyebrow2(shape));
-        features.push_back(tipLip_nose(shape));
+    for (int i = 0; i < shapes.size(); ++i){
+        features.push_back(openessMouth(shapes[i]));
+        features.push_back(widthMouth(shapes[i]));
+        features.push_back(widthEye(shapes[i]));
+        features.push_back(heigthEyebrow1(shapes[i]));
+        features.push_back(heigthEyebrow2(shapes[i]));
+        features.push_back(tipLip_nose(shapes[i]));
         features.push_back(-1.0);
     }
     return features;
@@ -171,12 +171,14 @@ int main()
                             drawPoints(shapes[i],&cimg);
                             //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
                             //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
-                            feat = featuresExtraction(shapes[i],faces.size());
+
                         }
+                        feat = featuresExtraction(shapes);
                         //print para debug
                         for (int i = 0; i < feat.size();++i){
                             cout<<feat[i]<<" ";
                         }
+                        cout<<endl;
 
 
 
@@ -184,7 +186,6 @@ int main()
                         win.clear_overlay();
                         win.set_image(cimg);
                         //win.add_overlay(render_face_detections(shapes));
-                        // cout<<endl;
 
                         feat.erase(feat.begin(),feat.begin()+feat.size());
 
