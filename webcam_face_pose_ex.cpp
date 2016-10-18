@@ -34,6 +34,7 @@
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
 #include <omp.h>
+#include <Python.h>
 
 using namespace dlib;
 using namespace std;
@@ -111,6 +112,58 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
     draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
 }
 
+
+void classify(std::vector<double> feat)
+{
+    PyObject *pName,*pFunc,*pModule,*pArgs,*pValue,*pList;
+
+    Py_Initialize(); //Inicializa interpretador de python
+    pName = PyString_FromString("classifier");
+    pModule = PyImport_Import(pName);
+    Py_DECREF(pName);
+    if (pModule != NULL){
+        pFunc = PyObject_GetAttrString(pModule,"classifyEmotion");
+
+        if (pFunc && PyCallable_Check(pFunc)){
+            pList = PyList_New(feat.size());
+            for (int i = 0; i < feat.size(); ++i){
+                PyObject *num = PyFloat_FromDouble(feat[i]);
+                if (!num) {
+                    Py_DECREF(pList);
+                    throw logic_error("Unable to allocate memory for Python list");
+                }
+                PyList_SET_ITEM(pList, i, num);
+            }
+            pArgs = PyTuple_New(1);
+            PyTuple_SetItem(pArgs, 0, pList);
+            pValue = PyObject_CallObject(pFunc,pArgs);  //chama função em python
+            if (pValue != NULL){
+                char* out = PyString_AsString(pValue);
+                Py_DECREF(pValue);
+            }
+            else{
+                cout<<"Deu merda no value\n";
+                PyErr_Print();
+                exit(0);
+            }
+            Py_DECREF(pList);
+            Py_DECREF(pArgs);
+            Py_DECREF(pValue);
+        }
+        Py_XDECREF(pFunc);
+        Py_DECREF(pModule);
+    }
+    else
+    {
+
+        cout<<"Problema carregando modulo"<<endl;
+        PyErr_Print();
+        exit(0);
+    }
+
+    // Py_Finalize();
+}
+
 int main()
 {
 
@@ -179,6 +232,8 @@ int main()
                             cout<<feat[i]<<" ";
                         }
                         cout<<endl;
+                        if( feat.size() > 0)
+                            classify(feat);
 
 
 

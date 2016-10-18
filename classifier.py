@@ -18,22 +18,18 @@ def switch(argument):
     return switcher.get(argument, "nothing")
 
 def classifyEmotion(feat):
-    X = []
-    for i in range(0,len(feat)-1):
-        X.append(float(i))
-    X = np.asarray(X)
-    classe = feat[-1]
+    X = np.asarray(feat[0:-1])
+    # classe = switch(int(feat[-1]))
     clf = joblib.load('net.nn')
    # clf.fit(X,Y)
     acertou = 0
-    predict = clf.predict(X.reshape(1,-1))
-    print "classificou ", classe, "como ", predict
+    print "classificou como ", str(clf.predict(X.reshape(1,-1))[0])
 
-    if classe == predict:
-        print "acertou ", classe
-        acertou += 1
-    print "****************************************************"
-    # print clf.score(X,Y)
+    # if classe == predict:
+    #     print "acertou ", classe
+    #     acertou += 1
+    # print "****************************************************"
+    # print clf.score(X,classe)
 
 
 
@@ -50,17 +46,13 @@ if __name__ == '__main__':
     for line in table:
     	aux = line.split()
     	valuesFloat = []
-    	for valuesStr in aux[0:-1]:
+    	for valuesStr in aux:
     		valuesFloat.append(float(valuesStr))
-        valuesFloat.append(switch(int(aux[-1])))
     	X.append(valuesFloat)
     	# X.append(switch(int(aux[len(aux)-1])))
     file.close()
-
-    X = np.asarray(X)
     # Y = np.asarray(Y)
     for i in X:
-        # print X
         classifyEmotion(i)
 # for pos, entrada in enumerate(X):
 #     print "classificou ", Y[pos], "como ", clf.predict(X[pos].reshape(1,-1))
