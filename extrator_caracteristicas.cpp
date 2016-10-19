@@ -50,70 +50,11 @@
 #include <dlib/svm_threaded.h>
 #include <dirent.h>
 #include <fstream>
-
+#include "myfeatures.h"
 using namespace dlib;
 using namespace std;
 
 // ----------------------------------------------------------------------------------------
-
-double length(point a,point b)
-{
-    return sqrt( (a.x()-b.x())*(a.x()-b.x()) + (a.y()-b.y())*(a.y()-b.y()) );
-}
-//Features
-double openessMouth(full_object_detection shape)    //33 - happy
-{
-    return length(shape.part(51),shape.part(57));
-}
-
-double widthMouth(full_object_detection shape)      //
-{
-    return length(shape.part(48),shape.part(54));
-}
-
-double widthEye(full_object_detection shape)      //
-{
-    return length(shape.part(36),shape.part(39))/2.0 + length(shape.part(42),\
-        shape.part(45))/2.0;
-}
-
-double heigthEyebrow1(full_object_detection shape)      //
-{
-    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),\
-        shape.part(26))/2.0;
-}
-
-double heigthEyebrow2(full_object_detection shape)      //
-{
-    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
-        shape.part(54))/2.0;
-}
-
-double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
-{
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
-        shape.part(22))/2.0;
-}
-
-
-std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes)
-{
-    std::vector<double> features;
-    cout<<"num="<<shapes.size()<<endl;
-    for(int i = 0; i < shapes.size(); i++)
-    {
-    	features.push_back(openessMouth(shapes[i]));
-	    features.push_back(widthMouth(shapes[i]));
-	    features.push_back(widthEye(shapes[i]));
-	    features.push_back(heigthEyebrow1(shapes[i]));
-	    features.push_back(heigthEyebrow2(shapes[i]));
-	    features.push_back(tipLip_nose(shapes[i]));
-	    features.push_back(-1.0);
-
-    }
-
-    return features;
-}
 
 //create a new blank file, and insert labels in column heading
 void createSpread()

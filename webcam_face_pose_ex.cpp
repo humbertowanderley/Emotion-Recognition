@@ -35,67 +35,12 @@
 #include <dlib/gui_widgets.h>
 #include <omp.h>
 #include <Python.h>
+#include "myfeatures.h"
 
 using namespace dlib;
 using namespace std;
 
 #define BUFFER_SIZE 3
-
-
-double length(point a,point b)
-{
-    return sqrt( (a.x()-b.x())*(a.x()-b.x()) + (a.y()-b.y())*(a.y()-b.y()) );
-}
-//Features
-double openessMouth(full_object_detection shape)    //33 - happy
-{
-    return length(shape.part(51),shape.part(57));
-}
-
-double widthMouth(full_object_detection shape)      //
-{
-    return length(shape.part(48),shape.part(54));
-}
-
-double widthEye(full_object_detection shape)      //
-{
-    return length(shape.part(36),shape.part(39))/2.0 + length(shape.part(42),\
-        shape.part(45))/2.0;
-}
-
-double heigthEyebrow1(full_object_detection shape)      //
-{
-    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),\
-        shape.part(26))/2.0;
-}
-
-double heigthEyebrow2(full_object_detection shape)      //
-{
-    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
-        shape.part(54))/2.0;
-}
-
-double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
-{
-    return length(shape.part(30),shape.part(21))/2.0 + length(shape.part(30),\
-        shape.part(22))/2.0;
-}
-
-//Other things
-std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes)
-{
-    std::vector<double> features;
-    for (int i = 0; i < shapes.size(); ++i){
-        features.push_back(openessMouth(shapes[i]));
-        features.push_back(widthMouth(shapes[i]));
-        features.push_back(widthEye(shapes[i]));
-        features.push_back(heigthEyebrow1(shapes[i]));
-        features.push_back(heigthEyebrow2(shapes[i]));
-        features.push_back(tipLip_nose(shapes[i]));
-        features.push_back(-1.0);
-    }
-    return features;
-}
 
 //função usada como debug para descobrir onde estão os pontos
 void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
@@ -108,15 +53,15 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 
     //draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
     //draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(21),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(30),2, rgb_pixel(255,0,0));
 }
 
 
-void classify(std::vector<double> feat)
+string classify(std::vector<double> feat)
 {
     PyObject *pName,*pFunc,*pModule,*pArgs,*pValue,*pList;
-
+    string out;
     Py_Initialize(); //Inicializa interpretador de python
     pName = PyString_FromString("classifier");
     pModule = PyImport_Import(pName);
@@ -127,6 +72,7 @@ void classify(std::vector<double> feat)
         if (pFunc && PyCallable_Check(pFunc)){
             pList = PyList_New(feat.size());
             for (int i = 0; i < feat.size(); ++i){
+
                 PyObject *num = PyFloat_FromDouble(feat[i]);
                 if (!num) {
                     Py_DECREF(pList);
@@ -136,13 +82,14 @@ void classify(std::vector<double> feat)
             }
             pArgs = PyTuple_New(1);
             PyTuple_SetItem(pArgs, 0, pList);
+
             pValue = PyObject_CallObject(pFunc,pArgs);  //chama função em python
             if (pValue != NULL){
-                char* out = PyString_AsString(pValue);
+                out = PyString_AsString(pValue);
                 Py_DECREF(pValue);
             }
             else{
-                cout<<"Deu merda no value\n";
+                cout<<"Erro no retorno da função\n";
                 PyErr_Print();
                 exit(0);
             }
@@ -160,7 +107,7 @@ void classify(std::vector<double> feat)
         PyErr_Print();
         exit(0);
     }
-
+    return out;
     // Py_Finalize();
 }
 
@@ -180,6 +127,9 @@ int main()
     try
     {
         cv::VideoCapture cap(0);
+        cap.set(CV_CAP_PROP_FRAME_WIDTH,640);
+        cap.set(CV_CAP_PROP_FRAME_HEIGHT,480);
+
         if (!cap.isOpened())
         {
             cerr << "Unable to connect to camera" << endl;
@@ -232,15 +182,15 @@ int main()
                             cout<<feat[i]<<" ";
                         }
                         cout<<endl;
+                        string emotion;
                         if( feat.size() > 0)
-                            classify(feat);
-
-
-
+                            emotion = classify(feat);
+                        cv::Mat gamb = toMat(cimg);
+                        cv::putText(gamb,emotion,cvPoint(10,100),6,2,cvScalar(255,0,0),2);
                         // Display it all on the screen
                         win.clear_overlay();
                         win.set_image(cimg);
-                        //win.add_overlay(render_face_detections(shapes));
+                        // win.add_overlay(render_face_detections(shapes));
 
                         feat.erase(feat.begin(),feat.begin()+feat.size());
 
