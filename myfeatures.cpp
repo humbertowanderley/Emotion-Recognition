@@ -17,6 +17,20 @@ point center(full_object_detection shape)
     return c;
 }
 
+std::vector<double> normalize(std::vector<double> v)
+{
+    double sum=0.0;
+    double norm;
+    for (int i = 0; i < v.size(); ++i){
+        sum+=v[i]*v[i];
+    }
+    norm = sqrt(sum);
+    for (int i = 0; i < v.size(); ++i){
+        v[i] /= norm;
+    }
+    return v;
+
+}
 
 //Features
 double openessMouth(full_object_detection shape)    //33 - happy
@@ -86,5 +100,5 @@ std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes
         features.push_back(tipLip_nose(shapes[i]));
         features.push_back(-1.0);
     }
-    return features;
+    return normalize(features);
 }
