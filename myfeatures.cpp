@@ -19,18 +19,15 @@ point center(full_object_detection shape)
 
 std::vector<double> normalize(std::vector<double> v)
 {
-    double sum=0.0;
-    double norm;
+    double maxv = *max_element(v.begin(), v.end()-1);
+    double minv = *min_element(v.begin(), v.end()-1);
     for (int i = 0; i < v.size(); ++i){
-        if(v[i]>0)
-            sum+=v[i]*v[i];
-    }
-    norm = sqrt(sum);
-    for (int i = 0; i < v.size(); ++i){
-        v[i] /= norm;
+        if (v[i]>=0){
+            v[i] = (v[i]-minv)/(maxv-minv);
+        }
+
     }
     return v;
-
 }
 
 //Features
