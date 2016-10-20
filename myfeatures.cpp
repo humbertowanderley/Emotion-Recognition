@@ -22,7 +22,8 @@ std::vector<double> normalize(std::vector<double> v)
     double sum=0.0;
     double norm;
     for (int i = 0; i < v.size(); ++i){
-        sum+=v[i]*v[i];
+        if(v[i]>0)
+            sum+=v[i]*v[i];
     }
     norm = sqrt(sum);
     for (int i = 0; i < v.size(); ++i){
