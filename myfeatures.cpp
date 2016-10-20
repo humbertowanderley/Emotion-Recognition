@@ -19,14 +19,17 @@ point center(full_object_detection shape)
 
 std::vector<double> normalize(std::vector<double> v)
 {
-    double maxv = *max_element(v.begin(), v.end()-1);
-    double minv = *min_element(v.begin(), v.end()-1);
-    for (int i = 0; i < v.size(); ++i){
-        if (v[i]>=0){
-            v[i] = (v[i]-minv)/(maxv-minv);
-        }
+    if (v.size() > 0){
+        double maxv = *max_element(v.begin(), v.end()-1);
+        double minv = *min_element(v.begin(), v.end()-1);
+        for (int i = 0; i < v.size(); ++i){
+            if (v[i]>=0){
+                v[i] = (v[i]-minv)/(maxv-minv);
+            }
 
+        }
     }
+
     return v;
 }
 
@@ -41,15 +44,15 @@ double widthMouth(full_object_detection shape)      //
     return length(shape.part(48),shape.part(54));
 }
 
-// double heigthMouth1(full_object_detection shape)      //
-// {
-//     return length(center(shape),shape.part(54));
-// }
+double heigthMouth1(full_object_detection shape)      //
+{
+    return length(center(shape),shape.part(54));
+}
 
-// double heigthMouth2(full_object_detection shape)      //
-// {
-//     return length(center(shape),shape.part(48));
-// }
+double heigthMouth2(full_object_detection shape)      //
+{
+    return length(center(shape),shape.part(48));
+}
 
 double widthEye(full_object_detection shape)      //
 {
@@ -57,26 +60,26 @@ double widthEye(full_object_detection shape)      //
         shape.part(45))/2.0;
 }
 
-// double heigthEyebrow1(full_object_detection shape)      //
-// {
-//     return length(center(shape),shape.part(19));
-// }
-
-// double heigthEyebrow2(full_object_detection shape)      //
-// {
-//     return length(center(shape),shape.part(24));
-// }
 double heigthEyebrow1(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),\
-        shape.part(26))/2.0;
+    return length(center(shape),shape.part(19));
 }
 
 double heigthEyebrow2(full_object_detection shape)      //
 {
-    return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
-        shape.part(54))/2.0;
+    return length(center(shape),shape.part(24));
 }
+// double heigthEyebrow1(full_object_detection shape)      //
+// {
+//     return length(shape.part(30),shape.part(17))/2.0 + length(shape.part(30),\
+//         shape.part(26))/2.0;
+// }
+
+// double heigthEyebrow2(full_object_detection shape)      //
+// {
+//     return length(shape.part(30),shape.part(48))/2.0 + length(shape.part(30),\
+//         shape.part(54))/2.0;
+// }
 
 double tipLip_nose(full_object_detection shape) //dist. do nariz à ponta da boca
 {
@@ -93,8 +96,8 @@ std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes
         features.push_back(widthEye(shapes[i]));
         features.push_back(heigthEyebrow1(shapes[i]));
         features.push_back(heigthEyebrow2(shapes[i]));
-        // features.push_back(heigthMouth1(shapes[i]));
-        // features.push_back(heigthMouth2(shapes[i]));
+        features.push_back(heigthMouth1(shapes[i]));
+        features.push_back(heigthMouth2(shapes[i]));
         features.push_back(tipLip_nose(shapes[i]));
         features.push_back(-1.0);
     }

@@ -65,7 +65,7 @@ void createSpread()
     if (file_descriptor.is_open() && file_descriptor.good())
     {
 
-        file_descriptor << "Openess Mouth\tWidth Mouth\tWidth Eye\t heigthEyebrow1\theigthEyebrow2\t tipLip_nose\tClass\n";
+        file_descriptor << "Openess Mouth\tWidth Mouth\tWidth Eye\t heigthEyebrow1\theigthEyebrow2\t heigthMouth1\t heigthMouth2\t tipLip_nose\tClass\n";
 
     }
     else
