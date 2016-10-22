@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=gnu++11 -Wreturn-type -DDLIB_JPEG_SUPPORT -DDLIB_USE_BLAS   -DDLIB_PNG_SUPPORT  -fopenmp -O3 -DNDEBUG    CMakeFiles/extrator_caracteristicas.dir/extrator_caracteristicas.cpp.o  -o extrator_caracteristicas -rdynamic dlib_build/libdlib.a -lpthread -lnsl -lSM -lICE -lX11 -lXext -lpng -lblas 
