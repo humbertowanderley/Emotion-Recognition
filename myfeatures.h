@@ -1,6 +1,8 @@
 #ifndef FEATURES_INCLUDED
 #define FEATURES_INCLUDED
 using namespace dlib;
+#define NUM_FEATURES 8
+#define NUM_CLASSES 5
 double length(point a,point b);
 point center(full_object_detection shape);
 double openessMouth(full_object_detection shape);

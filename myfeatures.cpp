@@ -99,7 +99,6 @@ std::vector<double> featuresExtraction(std::vector<full_object_detection> shapes
         features.push_back(heigthMouth1(shapes[i]));
         features.push_back(heigthMouth2(shapes[i]));
         features.push_back(tipLip_nose(shapes[i]));
-        features.push_back(-1.0);
     }
     return normalize(features);
 }

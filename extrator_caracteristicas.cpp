@@ -87,15 +87,10 @@ void updateSpread(std::vector<double> feat, int feat_class)
     if (file_descriptor.is_open() && file_descriptor.good())
     {
     	for (int i = 0; i < feat.size(); ++i)
-    	{
-	        if ( feat[i] >= 0 )
-	            file_descriptor<<feat[i]<<"\t";
-	        else
-	        {
-	        	file_descriptor<<feat_class<<"\t";
-	            file_descriptor<<"\n";
-	        }
-	    }
+	       file_descriptor<<feat[i]<<"\t";
+
+        file_descriptor<<feat_class<<"\t";
+        file_descriptor<<"\n";
     }
     else
     {
@@ -183,7 +178,7 @@ int main(int argc, char** argv)
         // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
         // as a command line argument.
 
-        deserialize(argv[1]) >> sp;
+        deserialize("../shape_predictor_68_face_landmarks.dat") >> sp;
         createSpread();
 
 

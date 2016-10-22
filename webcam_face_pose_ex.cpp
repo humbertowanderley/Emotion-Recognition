@@ -58,10 +58,10 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 }
 
 
-string classify(std::vector<double> feat)
+std::vector<int>  classify(std::vector<double> feat)
 {
     PyObject *pName,*pFunc,*pModule,*pArgs,*pValue,*pList;
-    string out;
+    std::vector<int> out;
     Py_Initialize(); //Inicializa interpretador de python
     pName = PyString_FromString("classifier");
     pModule = PyImport_Import(pName);
@@ -85,7 +85,17 @@ string classify(std::vector<double> feat)
 
             pValue = PyObject_CallObject(pFunc,pArgs);  //chama função em python
             if (pValue != NULL){
-                out = PyString_AsString(pValue);
+                if (PyList_Check(pValue)){
+                    for (int i = 0; i < NUM_CLASSES ; ++i){
+                        PyObject* aux = PyList_GetItem(pValue,i);
+                        out.push_back((int)PyLong_AsLong(aux));
+                    }
+                }
+                else
+                {
+                    cout<<"fudeu nao é uma lista"<<endl;
+                }
+
                 Py_DECREF(pValue);
             }
             else{
@@ -161,7 +171,6 @@ int main()
                 }
                 else{           //if it is the consumer
                     if (ind > 0){
-
                         // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
                         cv_image<bgr_pixel> cimg(fifo_frame[pos]);
                         pos = (pos+1)%BUFFER_SIZE;
@@ -172,29 +181,40 @@ int main()
                         {
                             shapes.push_back(pose_model(cimg, faces[i]));
                             drawPoints(shapes[i],&cimg);
-                            //cout<<"Abertura da boca da face "<<i<<":"<<openessMouth(shapes[i]);
-                            //cout<<"Largura da boca:"<<widthMouth(shapes[i]);
-
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
                         for (int i = 0; i < feat.size();++i){
                             cout<<feat[i]<<" ";
                         }
+
                         cout<<endl;
-                        string emotion;
-                        if( feat.size() > 0)
-                            emotion = classify(feat);
-                        cv::Mat gamb = toMat(cimg);
-                        cv::putText(gamb,emotion,cvPoint(10,100),6,2,cvScalar(255,0,0),2);
+                        std::vector<int> emotion;
+                        for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
+                            std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
+                            emotion = classify(aux);
+                            double posx=shapes[i/NUM_FEATURES].part(9).x();
+                            double posy=shapes[i/NUM_FEATURES].part(9).y();
+                            for (int i = 0; i < emotion.size(); ++i){
+                            if (emotion[i] > 0){
+                                cv::Mat gamb = toMat(cimg);
+                                if (i==1){
+                                    cv::putText(gamb,"Happy",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                }
+
+                                if (i==3){
+                                    cv::putText(gamb,"Surprise",cvPoint(posx,posy),6,2,cvScalar(255,0,0),2);
+                                }
+
+                            }
+                        }
+                        }
+
+
                         // Display it all on the screen
                         win.clear_overlay();
                         win.set_image(cimg);
                         // win.add_overlay(render_face_detections(shapes));
-
-                        feat.erase(feat.begin(),feat.begin()+feat.size());
-
-
                     }
                 }
             }
