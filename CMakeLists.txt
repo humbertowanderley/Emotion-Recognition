@@ -140,7 +140,9 @@ if (OPENMP_FOUND)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 endif()
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 find_package(PythonLibs REQUIRED)
+#add_library(webcam_face_pose_ex SHARED ${SOURCE_FILES})
 include_directories(${PYTHON_INCLUDE_DIRS})
 target_link_libraries(webcam_face_pose_ex ${PYTHON_LIBRARIES})
 

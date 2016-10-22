@@ -84,6 +84,7 @@ void updateSpread(std::vector<double> feat, int feat_class)
 
 	file_descriptor.open("../features.xls",ios::app);
 
+
     if (file_descriptor.is_open() && file_descriptor.good())
     {
     	for (int i = 0; i < feat.size(); ++i)
@@ -126,7 +127,9 @@ std::vector<full_object_detection>  image_processing(string path, shape_predicto
         for (unsigned long j = 0; j < dets.size(); ++j)
         {
             full_object_detection shape = sp(img, dets[j]);
-            shapes.push_back(shape);
+            //normalize shape in 100 pixels scale
+            chip_details chip = get_face_chip_details(shape,100);
+            shapes.push_back(map_det_to_chip(shape, chip));
         }
     }
 

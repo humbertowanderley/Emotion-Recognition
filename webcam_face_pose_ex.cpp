@@ -28,6 +28,7 @@
 */
 
 #include <dlib/opencv.h>
+#include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
@@ -53,8 +54,8 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 
     //draw_solid_circle (*imagem, shape.part(48),2, rgb_pixel(255,0,0));
     //draw_solid_circle (*imagem, shape.part(54),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(21),2, rgb_pixel(255,0,0));
-    draw_solid_circle (*imagem, shape.part(30),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(47),2, rgb_pixel(255,0,0));
+    draw_solid_circle (*imagem, shape.part(40),2, rgb_pixel(255,0,0));
 }
 
 
@@ -179,35 +180,79 @@ int main()
                         std::vector<full_object_detection> shapes;
                         for (unsigned long i = 0; i < faces.size(); ++i)
                         {
-                            shapes.push_back(pose_model(cimg, faces[i]));
-                            drawPoints(shapes[i],&cimg);
+                            full_object_detection shape = pose_model(cimg, faces[i]);
+                            chip_details chip = get_face_chip_details(shape,100);
+                            shapes.push_back(map_det_to_chip(shape, chip));
+
+                            drawPoints(shape,&cimg);
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
                         for (int i = 0; i < feat.size();++i){
-                            cout<<feat[i]<<" ";
+                            //cout<<feat[i]<<" ";
                         }
 
-                        cout<<endl;
+                        //cout<<endl;
                         std::vector<int> emotion;
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
                             double posx=shapes[i/NUM_FEATURES].part(9).x();
                             double posy=shapes[i/NUM_FEATURES].part(9).y();
-                            for (int i = 0; i < emotion.size(); ++i){
-                            if (emotion[i] > 0){
-                                cv::Mat gamb = toMat(cimg);
-                                if (i==1){
-                                    cv::putText(gamb,"Happy",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                }
-
-                                if (i==3){
-                                    cv::putText(gamb,"Surprise",cvPoint(posx,posy),6,2,cvScalar(255,0,0),2);
-                                }
-
+                            cv::Mat gamb = toMat(cimg);
+                            cout << emotion[5] << endl;
+                            //Posiçao 5 e um unico clasificador multclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para calssificar 5 clases 
+                            switch(emotion[5])
+                            {
+                                case 0: //cout << "Neutro" << endl;
+                                        putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                    break;
+                                case 1: //cout << "Feliz" << endl;
+                                        putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                    break;
+                                case 2: //cout << "Triste" << endl;
+                                         putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                    break;
+                                case 3: //cout << "surpresa" << endl;
+                                        putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                    break;
+                                case 4: //cout << "Raiva" <<endl;
+                                        putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                        break;
                             }
-                        }
+                            // for (int i = 0; i < emotion.size(); ++i){
+                            //     // cout << emotion[i]<<" ";
+                            //     if (emotion[i] > 0){
+                            //         cv::Mat gamb = toMat(cimg);
+                            //         if (i==0){
+                            //             cout << "Neutral" <<endl;
+                            //             cv::putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            //         }
+                            //         if (i==1){
+                            //             cout << "Happy" <<endl;
+                            //             cv::putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            //         }
+
+                            //         if (i==2){
+                            //             cout << "Triste" << endl;
+
+                            //             cv::putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            //         }
+
+                            //         if (i==3){
+                            //             cout << "Surprise" << endl;
+
+                            //             cv::putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            //         }
+                            //         if (i==4){
+                            //             cout << "Raiva" <<endl;
+                            //             cv::putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            //         }
+                                    
+
+                            //     }
+                            //  }
+                             // cout << endl;
                         }
 
 
@@ -232,5 +277,5 @@ int main()
     {
         cout << e.what() << endl;
     }
+    return 0;
 }
-
