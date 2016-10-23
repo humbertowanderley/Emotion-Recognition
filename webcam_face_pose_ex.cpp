@@ -184,7 +184,7 @@ int main()
                             chip_details chip = get_face_chip_details(shape,100);
                             shapes.push_back(map_det_to_chip(shape, chip));
 
-                            drawPoints(shape,&cimg);
+                        //    drawPoints(shape,&cimg);
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
@@ -193,15 +193,15 @@ int main()
                         }
 
                         //cout<<endl;
-                        std::vector<int> emotion;
+                        std::vector<int> emotion = {0,0,0,0,0,0};
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
                             double posx=shapes[i/NUM_FEATURES].part(9).x();
                             double posy=shapes[i/NUM_FEATURES].part(9).y();
                             cv::Mat gamb = toMat(cimg);
-                            cout << emotion[5] << endl;
-                            //Posiçao 5 e um unico clasificador multclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para calssificar 5 clases 
+                            
+                            //Posiçao 5 eh um unico clasificador multclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para calssificar 5 clases 
                             switch(emotion[5])
                             {
                                 case 0: //cout << "Neutro" << endl;
