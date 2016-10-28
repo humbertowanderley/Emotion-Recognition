@@ -41,7 +41,7 @@
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 3
+#define BUFFER_SIZE 10
 
 //função usada como debug para descobrir onde estão os pontos
 void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
@@ -129,12 +129,15 @@ int main()
     std::vector<double> feat;
     /*Buffer circular que para colocar
     frames processados pela webcam*/
-    cv::Mat fifo_frame[BUFFER_SIZE];
+    cv::Mat aux_mat;
+    string aux_text="Neutro";
+    double posx,posy;
+    // cv::Mat fifo_frame[BUFFER_SIZE];
     /*
     ----Variáveis que auxiliam o buffer circular----
     pos é posição atual que será consumida pela thread
     ind indica em qual posição será colocado o novo frame*/
-    int pos = 0 ,ind = 0;
+    int ind = 0;
     try
     {
         cv::VideoCapture cap(0);
@@ -164,17 +167,22 @@ int main()
             {
                 #pragma omp barrier
                 if (!me){       //if it is master and producer
-
-                        cap >> temp;
-                        fifo_frame[ind] = temp;
-                        ind = (ind+1)%BUFFER_SIZE;
+                        while(ind < BUFFER_SIZE)
+                        {
+                            cap >> temp;
+                            aux_mat = temp;
+                            putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                            cv_image<bgr_pixel> cimg(temp);
+                            win.set_image(cimg);
+                            ind++;
+                        }
 
                 }
                 else{           //if it is the consumer
-                    if (ind > 0){
+                    if (ind == BUFFER_SIZE){
                         // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
-                        cv_image<bgr_pixel> cimg(fifo_frame[pos]);
-                        pos = (pos+1)%BUFFER_SIZE;
+                        cv_image<bgr_pixel> cimg(aux_mat);
+                        ind = 0;
                         std::vector<rectangle> faces = detector(cimg);
                         // Find the pose of each face.
                         std::vector<full_object_detection> shapes;
@@ -197,27 +205,33 @@ int main()
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
-                            double posx=shapes[i/NUM_FEATURES].part(9).x();
-                            double posy=shapes[i/NUM_FEATURES].part(9).y();
+                            posx=shapes[i/NUM_FEATURES].part(9).x();
+                            posy=shapes[i/NUM_FEATURES].part(9).y();
                             cv::Mat gamb = toMat(cimg);
-                            
-                            //Posiçao 5 eh um unico clasificador multclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para calssificar 5 clases 
+
+                            //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
                             switch(emotion[5])
                             {
                                 case 0: //cout << "Neutro" << endl;
                                         putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                        aux_text = "Neutro";
+
                                     break;
                                 case 1: //cout << "Feliz" << endl;
                                         putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                        aux_text = "Feliz";
                                     break;
                                 case 2: //cout << "Triste" << endl;
                                          putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                         aux_text = "Triste";
                                     break;
                                 case 3: //cout << "surpresa" << endl;
                                         putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                        aux_text = "Surpresa";
                                     break;
                                 case 4: //cout << "Raiva" <<endl;
                                         putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                        aux_text = "Raiva";
                                         break;
                             }
                             // for (int i = 0; i < emotion.size(); ++i){
@@ -248,7 +262,7 @@ int main()
                             //             cout << "Raiva" <<endl;
                             //             cv::putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                             //         }
-                                    
+
 
                             //     }
                             //  }
