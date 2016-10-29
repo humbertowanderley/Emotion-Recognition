@@ -41,7 +41,7 @@
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 10
+#define BUFFER_SIZE 5
 
 //função usada como debug para descobrir onde estão os pontos
 void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
@@ -94,7 +94,7 @@ std::vector<int>  classify(std::vector<double> feat)
                 }
                 else
                 {
-                    cout<<"fudeu nao é uma lista"<<endl;
+                    cout<<"Nao é uma lista"<<endl;
                 }
 
                 Py_DECREF(pValue);
@@ -132,6 +132,8 @@ int main()
     cv::Mat aux_mat;
     string aux_text="Neutro";
     double posx,posy;
+    bool gostou = false,isNeutro = false;
+
     // cv::Mat fifo_frame[BUFFER_SIZE];
     /*
     ----Variáveis que auxiliam o buffer circular----
@@ -171,8 +173,18 @@ int main()
                         {
                             cap >> temp;
                             aux_mat = temp;
-                            putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                             cv_image<bgr_pixel> cimg(temp);
+                            std::vector<rectangle> faces = detector(cimg);
+                            if (faces.size()){
+                                putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                if (!isNeutro){
+                                    if (gostou)
+                                        putText(temp,"gostou",cvPoint(200,200),6,2,cvScalar(0,255,0),2);
+                                    else
+                                        putText(temp,"Nao gostou",cvPoint(200,200),6,2,cvScalar(0,0,255),2);
+
+                                }
+                            }
                             win.set_image(cimg);
                             ind++;
                         }
@@ -182,7 +194,7 @@ int main()
                     if (ind == BUFFER_SIZE){
                         // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
                         cv_image<bgr_pixel> cimg(aux_mat);
-                        ind = 0;
+
                         std::vector<rectangle> faces = detector(cimg);
                         // Find the pose of each face.
                         std::vector<full_object_detection> shapes;
@@ -196,10 +208,9 @@ int main()
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
-                        for (int i = 0; i < feat.size();++i){
-                            //cout<<feat[i]<<" ";
-                        }
-
+                        /*for (int i = 0; i < feat.size();++i){
+                            cout<<feat[i]<<" ";
+                        }*/
                         //cout<<endl;
                         std::vector<int> emotion = {0,0,0,0,0,0};
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
@@ -215,65 +226,40 @@ int main()
                                 case 0: //cout << "Neutro" << endl;
                                         putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Neutro";
-
+                                        isNeutro = true;
                                     break;
                                 case 1: //cout << "Feliz" << endl;
                                         putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Feliz";
+                                        isNeutro = false;
+                                        gostou=true;
                                     break;
                                 case 2: //cout << "Triste" << endl;
                                          putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                          aux_text = "Triste";
+                                         isNeutro = false;
+                                         gostou = false;
                                     break;
                                 case 3: //cout << "surpresa" << endl;
                                         putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Surpresa";
+                                        isNeutro = false;
+                                        gostou = true;
                                     break;
                                 case 4: //cout << "Raiva" <<endl;
                                         putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Raiva";
+                                        isNeutro = false;
+                                        gostou = true;
                                         break;
                             }
-                            // for (int i = 0; i < emotion.size(); ++i){
-                            //     // cout << emotion[i]<<" ";
-                            //     if (emotion[i] > 0){
-                            //         cv::Mat gamb = toMat(cimg);
-                            //         if (i==0){
-                            //             cout << "Neutral" <<endl;
-                            //             cv::putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                            //         }
-                            //         if (i==1){
-                            //             cout << "Happy" <<endl;
-                            //             cv::putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                            //         }
 
-                            //         if (i==2){
-                            //             cout << "Triste" << endl;
-
-                            //             cv::putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                            //         }
-
-                            //         if (i==3){
-                            //             cout << "Surprise" << endl;
-
-                            //             cv::putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                            //         }
-                            //         if (i==4){
-                            //             cout << "Raiva" <<endl;
-                            //             cv::putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                            //         }
-
-
-                            //     }
-                            //  }
-                             // cout << endl;
                         }
-
-
                         // Display it all on the screen
                         win.clear_overlay();
                         win.set_image(cimg);
                         // win.add_overlay(render_face_detections(shapes));
+                        ind = 0;
                     }
                 }
             }
