@@ -130,7 +130,7 @@ int main()
     /*Buffer circular que para colocar
     frames processados pela webcam*/
     cv::Mat aux_mat;
-    string aux_text="Neutro";
+    string aux_text="";
     double posx,posy;
     bool gostou = false,isNeutro = false;
 
@@ -175,13 +175,13 @@ int main()
                             aux_mat = temp;
                             cv_image<bgr_pixel> cimg(temp);
                             std::vector<rectangle> faces = detector(cimg);
-                            if (faces.size()){
+                            if (faces.size() && aux_text != ""){
                                 putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                 if (!isNeutro){
                                     if (gostou)
-                                        putText(temp,"gostou",cvPoint(200,200),6,2,cvScalar(0,255,0),2);
+                                        putText(temp,"gostou",cvPoint(50,50),6,2,cvScalar(0,255,0),2);
                                     else
-                                        putText(temp,"Nao gostou",cvPoint(200,200),6,2,cvScalar(0,0,255),2);
+                                        putText(temp,"Nao gostou",cvPoint(50,50),6,2,cvScalar(0,0,255),2);
 
                                 }
                             }
@@ -201,6 +201,8 @@ int main()
                         for (unsigned long i = 0; i < faces.size(); ++i)
                         {
                             full_object_detection shape = pose_model(cimg, faces[i]);
+                            posx=shape.part(9).x()-100;
+                            posy=shape.part(9).y()+50;
                             chip_details chip = get_face_chip_details(shape,100);
                             shapes.push_back(map_det_to_chip(shape, chip));
 
@@ -216,8 +218,7 @@ int main()
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
-                            posx=shapes[i/NUM_FEATURES].part(9).x();
-                            posy=shapes[i/NUM_FEATURES].part(9).y();
+
                             cv::Mat gamb = toMat(cimg);
 
                             //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
@@ -250,7 +251,7 @@ int main()
                                         putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Raiva";
                                         isNeutro = false;
-                                        gostou = true;
+                                        gostou = false;
                                         break;
                             }
 
