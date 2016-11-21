@@ -43,6 +43,14 @@ using namespace std;
 
 #define BUFFER_SIZE 5
 
+enum {
+    NEUTRAL=0,
+    HAPPY,
+    SAD,
+    SURPRISE,
+    MAD
+ };
+
 //função usada como debug para descobrir onde estão os pontos
 void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 {
@@ -127,12 +135,14 @@ int main()
 
     cv::Mat temp;
     std::vector<double> feat;
-    /*Buffer circular que para colocar
-    frames processados pela webcam*/
+    /* Buffer circular que para colocar
+    frames processados pela webcam */
     cv::Mat aux_mat;
     string aux_text="";
     double posx,posy;
     bool gostou = false,isNeutro = false;
+
+
 
     // cv::Mat fifo_frame[BUFFER_SIZE];
     /*
@@ -224,30 +234,30 @@ int main()
                             //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
                             switch(emotion[5])
                             {
-                                case 0: //cout << "Neutro" << endl;
+                                case NEUTRAL: //cout << "Neutro" << endl;
                                         putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Neutro";
                                         isNeutro = true;
                                     break;
-                                case 1: //cout << "Feliz" << endl;
+                                case HAPPY: //cout << "Feliz" << endl;
                                         putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Feliz";
                                         isNeutro = false;
                                         gostou=true;
                                     break;
-                                case 2: //cout << "Triste" << endl;
+                                case SAD: //cout << "Triste" << endl;
                                          putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                          aux_text = "Triste";
                                          isNeutro = false;
                                          gostou = false;
                                     break;
-                                case 3: //cout << "surpresa" << endl;
+                                case SURPRISE: //cout << "surpresa" << endl;
                                         putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Surpresa";
                                         isNeutro = false;
                                         gostou = true;
                                     break;
-                                case 4: //cout << "Raiva" <<endl;
+                                case MAD: //cout << "Raiva" <<endl;
                                         putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
                                         aux_text = "Raiva";
                                         isNeutro = false;
