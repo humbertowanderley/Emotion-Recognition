@@ -1,7 +1,6 @@
 #!/bin/bash
 #install required package
-apt-get install build-essential
-apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+apt-get install build-essential cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev -y
 #install opencv
 git clone https://github.com/opencv/opencv.git
 cd opencv
@@ -17,3 +16,4 @@ mkdir build
 cd build
 cmake ..
 cmake --build . --config Release
+echo 'export PYTHONPATH=.' >> ~/.bashrc
