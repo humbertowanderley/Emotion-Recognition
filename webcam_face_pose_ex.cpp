@@ -35,22 +35,18 @@
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
 #include <omp.h>
+#include <string.h>
 #include <Python.h>
 #include "myfeatures.h"
 
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 5
+#define BUFFER_SIZE 20
+#define ALL_FRAME numDeslike+numLike+indiferent
 
-enum {
-    NEUTRAL=0,
-    HAPPY,
-    SAD,
-    SURPRISE,
-    MAD
- };
-
+double posx,posy;
+string aux_text;
 //função usada como debug para descobrir onde estão os pontos
 void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 {
@@ -130,21 +126,35 @@ std::vector<int>  classify(std::vector<double> feat)
     // Py_Finalize();
 }
 
+void catchFrames(cv::Mat* fifo_frame,cv::VideoCapture cap,image_window* win)
+{
+    cv::Mat temp;
+    for(int i = 0 ; i < BUFFER_SIZE;i++)
+    {
+        cap >> temp;
+        cv_image<bgr_pixel> cimg(temp);
+        // putText(temp,aux_text,cvPoint(120,10),6,2,cvScalar(0,255,255),2);
+        // win->set_image(cimg);
+        fifo_frame[i] = temp;
+    }
+}
+
+double calcularPorcentagem(long int x)
+{
+    return x*100 / (double)BUFFER_SIZE;
+}
+
 int main()
 {
-
-    cv::Mat temp;
     std::vector<double> feat;
+
+
+    /**************Flags control*****************/
+    long int numLike=0,numDeslike=0,indiferent=0;
+
     /* Buffer circular que para colocar
     frames processados pela webcam */
-    cv::Mat aux_mat;
-    string aux_text="";
-    double posx,posy;
-    bool gostou = false,isNeutro = false;
-
-
-
-    // cv::Mat fifo_frame[BUFFER_SIZE];
+    cv::Mat fifo_frame[BUFFER_SIZE];
     /*
     ----Variáveis que auxiliam o buffer circular----
     pos é posição atual que será consumida pela thread
@@ -169,111 +179,86 @@ int main()
         shape_predictor pose_model;
         deserialize("shape_predictor_68_face_landmarks.dat") >> pose_model;
 
-
-        // uma nova thread é criada junto a master
-        #pragma omp parallel num_threads(2)
+        while(/*!win.is_closed()*/ 1)
         {
-            //indica qual é a thread. 0->master/producer,1->consumer
-            int me = omp_get_thread_num();
-            while(!win.is_closed())
-            {
-                #pragma omp barrier
-                if (!me){       //if it is master and producer
-                        while(ind < BUFFER_SIZE)
-                        {
-                            cap >> temp;
-                            aux_mat = temp;
-                            cv_image<bgr_pixel> cimg(temp);
-                            std::vector<rectangle> faces = detector(cimg);
-                            if (faces.size() && aux_text != ""){
-                                putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                if (!isNeutro){
-                                    if (gostou)
-                                        putText(temp,"gostou",cvPoint(50,50),6,2,cvScalar(0,255,0),2);
-                                    else
-                                        putText(temp,"Nao gostou",cvPoint(50,50),6,2,cvScalar(0,0,255),2);
+            catchFrames(fifo_frame,cap,&win);
+            for (int pos = 0; pos < BUFFER_SIZE; ++pos){
+                cv_image<bgr_pixel> cimg(fifo_frame[pos]);
 
-                                }
-                            }
-                            win.set_image(cimg);
-                            ind++;
-                        }
+                std::vector<rectangle> faces = detector(cimg);
+                // Find the pose of each face.
+                std::vector<full_object_detection> shapes;
+                for (unsigned long i = 0; i < faces.size(); ++i)
+                {
+                    full_object_detection shape = pose_model(cimg, faces[i]);
+                    posx=shape.part(9).x()-100;
+                    posy=shape.part(9).y()+50;
+                    chip_details chip = get_face_chip_details(shape,100);
+                    shapes.push_back(map_det_to_chip(shape, chip));
 
+                //    drawPoints(shape,&cimg);
                 }
-                else{           //if it is the consumer
-                    if (ind == BUFFER_SIZE){
-                        // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
-                        cv_image<bgr_pixel> cimg(aux_mat);
+                feat = featuresExtraction(shapes);
+                //print para debug
+                /*for (int i = 0; i < feat.size();++i){
+                    cout<<feat[i]<<" ";
+                }*/
+                //cout<<endl;
+                std::vector<int> emotion = {0,0,0,0,0,0};
+                cv::Mat gamb = toMat(cimg);
+                for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
+                    std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
+                    emotion = classify(aux);
 
-                        std::vector<rectangle> faces = detector(cimg);
-                        // Find the pose of each face.
-                        std::vector<full_object_detection> shapes;
-                        for (unsigned long i = 0; i < faces.size(); ++i)
-                        {
-                            full_object_detection shape = pose_model(cimg, faces[i]);
-                            posx=shape.part(9).x()-100;
-                            posy=shape.part(9).y()+50;
-                            chip_details chip = get_face_chip_details(shape,100);
-                            shapes.push_back(map_det_to_chip(shape, chip));
 
-                        //    drawPoints(shape,&cimg);
-                        }
-                        feat = featuresExtraction(shapes);
-                        //print para debug
-                        /*for (int i = 0; i < feat.size();++i){
-                            cout<<feat[i]<<" ";
-                        }*/
-                        //cout<<endl;
-                        std::vector<int> emotion = {0,0,0,0,0,0};
-                        for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
-                            std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
-                            emotion = classify(aux);
-
-                            cv::Mat gamb = toMat(cimg);
-
-                            //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
-                            switch(emotion[5])
-                            {
-                                case NEUTRAL: //cout << "Neutro" << endl;
-                                        putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Neutro";
-                                        isNeutro = true;
-                                    break;
-                                case HAPPY: //cout << "Feliz" << endl;
-                                        putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Feliz";
-                                        isNeutro = false;
-                                        gostou=true;
-                                    break;
-                                case SAD: //cout << "Triste" << endl;
-                                         putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                         aux_text = "Triste";
-                                         isNeutro = false;
-                                         gostou = false;
-                                    break;
-                                case SURPRISE: //cout << "surpresa" << endl;
-                                        putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Surpresa";
-                                        isNeutro = false;
-                                        gostou = true;
-                                    break;
-                                case MAD: //cout << "Raiva" <<endl;
-                                        putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Raiva";
-                                        isNeutro = false;
-                                        gostou = false;
-                                        break;
-                            }
-
-                        }
-                        // Display it all on the screen
-                        win.clear_overlay();
-                        win.set_image(cimg);
-                        // win.add_overlay(render_face_detections(shapes));
-                        ind = 0;
+                    //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
+                    switch(emotion[5])
+                    {
+                        case NEUTRAL: //cout << "Neutro" << endl;
+                                // putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                // aux_text = "Neutro";
+                                indiferent++;
+                            break;
+                        case HAPPY: //cout << "Feliz" << endl;
+                                // putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                // aux_text = "Feliz";
+                                numLike++;
+                            break;
+                        case SAD: //cout << "Triste" << endl;
+                                 // putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                 // aux_text = "Triste";
+                                 numDeslike++;
+                            break;
+                        case SURPRISE: //cout << "surpresa" << endl;
+                                // putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                // aux_text = "Surpresa";
+                                numLike++;
+                            break;
+                        case MAD: //cout << "Raiva" <<endl;
+                                // putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
+                                // aux_text = "Raiva";
+                                numDeslike++;
+                                break;
                     }
+
                 }
+                // Display it all on the screen
+                if (pos==BUFFER_SIZE-1){
+                    aux_text="like="+to_string(calcularPorcentagem(numLike));
+                    aux_text+="%%\ndelike="+to_string(calcularPorcentagem(numDeslike));
+                    aux_text+="%%\nindiferent="+to_string(calcularPorcentagem(indiferent))+"%%";
+                    cout<<aux_text<<endl;
+                    // putText(gamb,aux_text,cvPoint(120,10),6,2,cvScalar(0,255,255),2);
+                    numLike=numDeslike=indiferent=0;
+                }
+                // win.clear_overlay();
+                // win.set_image(cimg);
+
+
+
+                // win.add_overlay(render_face_detections(shapes));
             }
+
         }
 
     }

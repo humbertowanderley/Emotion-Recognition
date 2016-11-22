@@ -3,6 +3,15 @@
 using namespace dlib;
 #define NUM_FEATURES 9
 #define NUM_CLASSES 6
+
+enum {
+    NEUTRAL=0,
+    HAPPY,
+    SAD,
+    SURPRISE,
+    MAD
+};
+
 double length(point a,point b);
 point center(full_object_detection shape);
 
