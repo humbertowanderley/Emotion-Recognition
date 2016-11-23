@@ -41,7 +41,7 @@
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 5
+#define BUFFER_SIZE 10
 
 enum {
     NEUTRAL=0,
@@ -139,11 +139,13 @@ int main()
     frames processados pela webcam */
     cv::Mat aux_mat;
     string aux_text="";
-    double posx,posy;
-    bool gostou = false,isNeutro = false;
+
+     /**************Flags control*****************/
+    long int numLike=0,numDeslike=0,indiferent=0;
 
 
-
+    int buffer[BUFFER_SIZE];
+    int iter=0;
     // cv::Mat fifo_frame[BUFFER_SIZE];
     /*
     ----Variáveis que auxiliam o buffer circular----
@@ -162,13 +164,13 @@ int main()
             return 1;
         }
 
-        image_window win;
+
 
         // Load face detection and pose estimation models.
         frontal_face_detector detector = get_frontal_face_detector();
         shape_predictor pose_model;
         deserialize("shape_predictor_68_face_landmarks.dat") >> pose_model;
-
+        image_window win;
 
         // uma nova thread é criada junto a master
         #pragma omp parallel num_threads(2)
@@ -179,25 +181,14 @@ int main()
             {
                 #pragma omp barrier
                 if (!me){       //if it is master and producer
-                        while(ind < BUFFER_SIZE)
-                        {
-                            cap >> temp;
-                            aux_mat = temp;
-                            cv_image<bgr_pixel> cimg(temp);
-                            std::vector<rectangle> faces = detector(cimg);
-                            if (faces.size() && aux_text != ""){
-                                putText(temp,aux_text,cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                if (!isNeutro){
-                                    if (gostou)
-                                        putText(temp,"gostou",cvPoint(50,50),6,2,cvScalar(0,255,0),2);
-                                    else
-                                        putText(temp,"Nao gostou",cvPoint(50,50),6,2,cvScalar(0,0,255),2);
-
-                                }
-                            }
-                            win.set_image(cimg);
-                            ind++;
-                        }
+                    while(ind < BUFFER_SIZE)
+                    {
+                        cap >> temp;
+                        aux_mat = temp;
+                        cv_image<bgr_pixel> cimg(temp);
+                        win.set_image(cimg);
+                        ind++;
+                    }
 
                 }
                 else{           //if it is the consumer
@@ -211,8 +202,6 @@ int main()
                         for (unsigned long i = 0; i < faces.size(); ++i)
                         {
                             full_object_detection shape = pose_model(cimg, faces[i]);
-                            posx=shape.part(9).x()-100;
-                            posy=shape.part(9).y()+50;
                             chip_details chip = get_face_chip_details(shape,100);
                             shapes.push_back(map_det_to_chip(shape, chip));
 
@@ -228,43 +217,34 @@ int main()
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
+                            buffer[iter++] = emotion[5];
+                        }
+
+                        if(iter == BUFFER_SIZE){
 
                             cv::Mat gamb = toMat(cimg);
-
-                            //Posição 5 é um único clasificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
-                            switch(emotion[5])
-                            {
-                                case NEUTRAL: //cout << "Neutro" << endl;
-                                        putText(gamb,"Neutro",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Neutro";
-                                        isNeutro = true;
-                                    break;
-                                case HAPPY: //cout << "Feliz" << endl;
-                                        putText(gamb,"Feliz",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Feliz";
-                                        isNeutro = false;
-                                        gostou=true;
-                                    break;
-                                case SAD: //cout << "Triste" << endl;
-                                         putText(gamb,"Triste",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                         aux_text = "Triste";
-                                         isNeutro = false;
-                                         gostou = false;
-                                    break;
-                                case SURPRISE: //cout << "surpresa" << endl;
-                                        putText(gamb,"Surpresa",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Surpresa";
-                                        isNeutro = false;
-                                        gostou = true;
-                                    break;
-                                case MAD: //cout << "Raiva" <<endl;
-                                        putText(gamb,"Raiva",cvPoint(posx,posy),6,2,cvScalar(0,255,255),2);
-                                        aux_text = "Raiva";
-                                        isNeutro = false;
-                                        gostou = false;
+                            for (int i = 0; i < iter; ++i){
+                                //Posição 5 é um único classificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
+                                switch(emotion[5])
+                                {
+                                    case NEUTRAL:
+                                            indiferent++;
                                         break;
+                                    case HAPPY:
+                                            numLike++;
+                                        break;
+                                    case SAD:
+                                             numDeslike++;
+                                        break;
+                                    case SURPRISE:
+                                            numLike++;
+                                        break;
+                                    case MAD:
+                                            numDeslike++;
+                                            break;
+                                }
                             }
-
+                            iter=0;
                         }
                         // Display it all on the screen
                         win.clear_overlay();
