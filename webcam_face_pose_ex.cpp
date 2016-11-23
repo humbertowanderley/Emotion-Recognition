@@ -33,7 +33,7 @@
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
-#include <dlib/gui_widgets.h>
+// #include <dlib/gui_widgets.h>
 #include <omp.h>
 #include <string.h>
 #include <Python.h>
@@ -126,7 +126,7 @@ std::vector<int>  classify(std::vector<double> feat)
     // Py_Finalize();
 }
 
-void catchFrames(cv::Mat* fifo_frame,cv::VideoCapture cap,image_window* win)
+void catchFrames(cv::Mat* fifo_frame,cv::VideoCapture cap)//,image_window* win)
 {
     cv::Mat temp;
     for(int i = 0 ; i < BUFFER_SIZE;i++)
@@ -172,7 +172,7 @@ int main()
             return 1;
         }
 
-        image_window win;
+        // image_window win;
 
         // Load face detection and pose estimation models.
         frontal_face_detector detector = get_frontal_face_detector();
@@ -181,7 +181,7 @@ int main()
 
         while(/*!win.is_closed()*/ 1)
         {
-            catchFrames(fifo_frame,cap,&win);
+            catchFrames(fifo_frame,cap);//,&win);
             for (int pos = 0; pos < BUFFER_SIZE; ++pos){
                 cv_image<bgr_pixel> cimg(fifo_frame[pos]);
 
