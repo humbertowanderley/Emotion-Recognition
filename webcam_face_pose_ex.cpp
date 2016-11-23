@@ -41,7 +41,7 @@
 using namespace dlib;
 using namespace std;
 
-#define BUFFER_SIZE 10
+#define BUFFER_SIZE 5
 
 enum {
     NEUTRAL=0,
@@ -130,6 +130,12 @@ std::vector<int>  classify(std::vector<double> feat)
     // Py_Finalize();
 }
 
+
+double calcularPorcentagem(long int x)
+{
+    return x*100 / (double)BUFFER_SIZE;
+}
+
 int main()
 {
 
@@ -138,7 +144,7 @@ int main()
     /* Buffer circular que para colocar
     frames processados pela webcam */
     cv::Mat aux_mat;
-    string aux_text="";
+    string aux_text="",like_text="",deslike_text="",ind_text="";
 
      /**************Flags control*****************/
     long int numLike=0,numDeslike=0,indiferent=0;
@@ -164,8 +170,6 @@ int main()
             return 1;
         }
 
-
-
         // Load face detection and pose estimation models.
         frontal_face_detector detector = get_frontal_face_detector();
         shape_predictor pose_model;
@@ -183,9 +187,15 @@ int main()
                 if (!me){       //if it is master and producer
                     while(ind < BUFFER_SIZE)
                     {
+                        cout<<"capture "<<ind<<"    "<<iter<<endl;
                         cap >> temp;
                         aux_mat = temp;
                         cv_image<bgr_pixel> cimg(temp);
+                        if (feat.size()>0){
+                            putText(temp,like_text,cvPoint(100,120),6,1,cvScalar(0,255,255),2);
+                            putText(temp,deslike_text,cvPoint(100,160),6,1,cvScalar(0,255,255),2);
+                            putText(temp,ind_text,cvPoint(100,200),6,1,cvScalar(0,255,255),2);
+                        }
                         win.set_image(cimg);
                         ind++;
                     }
@@ -209,23 +219,25 @@ int main()
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
-                        /*for (int i = 0; i < feat.size();++i){
+                        for (int i = 0; i < feat.size();++i){
                             cout<<feat[i]<<" ";
-                        }*/
-                        //cout<<endl;
+                        }
+                        cout<<endl;
                         std::vector<int> emotion = {0,0,0,0,0,0};
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
-                            buffer[iter++] = emotion[5];
+                            buffer[(iter++)%BUFFER_SIZE] = emotion[5];
+                            cout<<"entrar\n";
                         }
 
-                        if(iter == BUFFER_SIZE){
+                        if(iter >= BUFFER_SIZE){
+                            cout<<"akiiiii\n";
 
                             cv::Mat gamb = toMat(cimg);
                             for (int i = 0; i < iter; ++i){
                                 //Posição 5 é um único classificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
-                                switch(emotion[5])
+                                switch(buffer[i])
                                 {
                                     case NEUTRAL:
                                             indiferent++;
@@ -244,12 +256,21 @@ int main()
                                             break;
                                 }
                             }
+                            like_text="like="+to_string(calcularPorcentagem(numLike))+"%%";
+                            putText(gamb,like_text,cvPoint(100,120),6,1,cvScalar(0,255,255),2);
+                            deslike_text ="deslike="+to_string(calcularPorcentagem(numDeslike))+"%%";
+                            putText(gamb,deslike_text,cvPoint(100,160),6,1,cvScalar(0,255,255),2);
+                            ind_text="indiferent="+to_string(calcularPorcentagem(indiferent))+"%%";
+                            putText(gamb,ind_text,cvPoint(100,200),6,1,cvScalar(0,255,255),2);
+                            cout<<like_text<<" \t"<<deslike_text<<" \t"<<ind_text<<endl;
+                            numLike=numDeslike=indiferent=0;
                             iter=0;
+                            // Display it all on the screen
+                            win.clear_overlay();
+                            win.set_image(cimg);
+                            // win.add_overlay(render_face_detections(shapes));
+
                         }
-                        // Display it all on the screen
-                        win.clear_overlay();
-                        win.set_image(cimg);
-                        // win.add_overlay(render_face_detections(shapes));
                         ind = 0;
                     }
                 }
