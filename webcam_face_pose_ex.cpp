@@ -42,6 +42,9 @@ using namespace dlib;
 using namespace std;
 
 #define BUFFER_SIZE 5
+#define POS_X 10
+#define POS_Y 50
+#define NUM_PESSOAS numDeslike+numLike+indiferent
 
 enum {
     NEUTRAL=0,
@@ -67,7 +70,7 @@ void drawPoints(full_object_detection shape, cv_image<bgr_pixel> *imagem)
 }
 
 
-std::vector<int>  classify(std::vector<double> feat)
+std::vector<int> classify(std::vector<double> feat)
 {
     PyObject *pName,*pFunc,*pModule,*pArgs,*pValue,*pList;
     std::vector<int> out;
@@ -131,14 +134,45 @@ std::vector<int>  classify(std::vector<double> feat)
 }
 
 
-double calcularPorcentagem(long int x)
+double calcularPorcentagem(int x,int y)
 {
-    return x*100 / (double)BUFFER_SIZE;
+    return x*100 / (double)y;
+}
+
+int maiorEmocao(int* buffer,int iter)
+{
+    int v[] = {0,0,0,0,0};
+    for (int i = 0; i < iter; ++i){
+        //Posição 5 é um único classificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
+        switch(buffer[i])
+        {
+            case NEUTRAL:
+                    v[NEUTRAL]++;
+                break;
+            case HAPPY:
+                    v[HAPPY]++;
+                break;
+            case SAD:
+                    v[SAD]++;
+                break;
+            case SURPRISE:
+                    v[SURPRISE]++;
+                break;
+            case MAD:
+                    v[MAD]++;
+                break;
+        }
+    }
+    cout<<"VETOR\n";
+    int max = *max_element(v,v+5);
+    for (int i = 0; i < 5; ++i){
+        if (v[i]==max)
+            return i;
+    }
 }
 
 int main()
 {
-
     cv::Mat temp;
     std::vector<double> feat;
     /* Buffer circular que para colocar
@@ -147,11 +181,11 @@ int main()
     string aux_text="",like_text="",deslike_text="",ind_text="";
 
      /**************Flags control*****************/
-    long int numLike=0,numDeslike=0,indiferent=0;
-
-
+    int numLike=0,numDeslike=0,indiferent=0;
+    // variável q espera o cara que ja foi classificado sair
+    bool wait = 0;
     int buffer[BUFFER_SIZE];
-    int iter=0;
+    int iter = 0;
     // cv::Mat fifo_frame[BUFFER_SIZE];
     /*
     ----Variáveis que auxiliam o buffer circular----
@@ -179,31 +213,28 @@ int main()
         // uma nova thread é criada junto a master
         #pragma omp parallel num_threads(2)
         {
-            //indica qual é a thread. 0->master/producer,1->consumer
+            // indica qual é a thread. 0->master/producer,1->consumer
             int me = omp_get_thread_num();
             while(!win.is_closed())
             {
                 #pragma omp barrier
-                if (!me){       //if it is master and producer
+                if (!me){       // if it is master and producer
                     while(ind < BUFFER_SIZE)
                     {
                         cout<<"capture "<<ind<<"    "<<iter<<endl;
                         cap >> temp;
                         aux_mat = temp;
                         cv_image<bgr_pixel> cimg(temp);
-                        if (feat.size()>0){
-                            putText(temp,like_text,cvPoint(100,120),6,1,cvScalar(0,255,255),2);
-                            putText(temp,deslike_text,cvPoint(100,160),6,1,cvScalar(0,255,255),2);
-                            putText(temp,ind_text,cvPoint(100,200),6,1,cvScalar(0,255,255),2);
-                        }
+                        putText(temp,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(0,255,255),2);
+                        putText(temp,deslike_text,cvPoint(POS_X,POS_Y+40),6,1,cvScalar(0,255,255),2);
+                        putText(temp,ind_text,cvPoint(POS_X,POS_Y+80),6,1,cvScalar(0,255,255),2);
                         win.set_image(cimg);
                         ind++;
                     }
 
                 }
-                else{           //if it is the consumer
+                else{           // if it is the consumer
                     if (ind == BUFFER_SIZE){
-                        // cout<<"ind="<<ind<<" "<<"pos="<<pos<<endl;
                         cv_image<bgr_pixel> cimg(aux_mat);
 
                         std::vector<rectangle> faces = detector(cimg);
@@ -214,57 +245,65 @@ int main()
                             full_object_detection shape = pose_model(cimg, faces[i]);
                             chip_details chip = get_face_chip_details(shape,100);
                             shapes.push_back(map_det_to_chip(shape, chip));
-
-                        //    drawPoints(shape,&cimg);
                         }
                         feat = featuresExtraction(shapes);
                         //print para debug
-                        for (int i = 0; i < feat.size();++i){
+                        /*for (int i = 0; i < feat.size();++i){
                             cout<<feat[i]<<" ";
                         }
-                        cout<<endl;
+                        cout<<endl;*/
+                        if (wait && feat.size()==0)
+                        {
+                            cout<<"sai do wait\n";
+                            wait = 0;
+                        }
                         std::vector<int> emotion = {0,0,0,0,0,0};
                         for (int i = 0; i < feat.size(); i+=NUM_FEATURES){
                             std::vector<double> aux(feat.begin()+i,feat.begin()+i+(NUM_FEATURES));
                             emotion = classify(aux);
-                            buffer[(iter++)%BUFFER_SIZE] = emotion[5];
-                            cout<<"entrar\n";
+                            if(!wait)
+                                buffer[(iter++)%BUFFER_SIZE] = emotion[5];
                         }
 
                         if(iter >= BUFFER_SIZE){
-                            cout<<"akiiiii\n";
+
+                            switch(maiorEmocao(buffer,iter))
+                            {
+                                case NEUTRAL:
+                                        cout<<"maior emocao foi neutro"<<endl;
+                                        indiferent++;
+                                    break;
+                                case HAPPY:
+                                        cout<<"maior emocao foi feliz"<<endl;
+                                        numLike++;
+                                    break;
+                                case SAD:
+                                        cout<<"maior emocao foi triste"<<endl;
+                                        numDeslike++;
+                                    break;
+                                case SURPRISE:
+                                        cout<<"maior emocao foi surpresa"<<endl;
+                                        numLike++;
+                                    break;
+                                case MAD:
+                                        cout<<"maior emocao foi raiva"<<endl;
+                                        numDeslike++;
+                                    break;
+                            }
 
                             cv::Mat gamb = toMat(cimg);
-                            for (int i = 0; i < iter; ++i){
-                                //Posição 5 é um único classificador multiclasse abordagem 1 vs 1, criando 4 + 3 +2 + 1 SVMs para classificar 5 clases
-                                switch(buffer[i])
-                                {
-                                    case NEUTRAL:
-                                            indiferent++;
-                                        break;
-                                    case HAPPY:
-                                            numLike++;
-                                        break;
-                                    case SAD:
-                                             numDeslike++;
-                                        break;
-                                    case SURPRISE:
-                                            numLike++;
-                                        break;
-                                    case MAD:
-                                            numDeslike++;
-                                            break;
-                                }
-                            }
-                            like_text="like="+to_string(calcularPorcentagem(numLike))+"%%";
-                            putText(gamb,like_text,cvPoint(100,120),6,1,cvScalar(0,255,255),2);
-                            deslike_text ="deslike="+to_string(calcularPorcentagem(numDeslike))+"%%";
-                            putText(gamb,deslike_text,cvPoint(100,160),6,1,cvScalar(0,255,255),2);
-                            ind_text="indiferent="+to_string(calcularPorcentagem(indiferent))+"%%";
-                            putText(gamb,ind_text,cvPoint(100,200),6,1,cvScalar(0,255,255),2);
+                            ;
+                            like_text="like="+to_string(calcularPorcentagem(numLike,NUM_PESSOAS))+"%%";
+                            putText(gamb,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(0,255,255),2);
+                            deslike_text ="deslike="+to_string(calcularPorcentagem(numDeslike,NUM_PESSOAS))+"%%";
+                            putText(gamb,deslike_text,cvPoint(POS_X,POS_Y+40),6,1,cvScalar(0,255,255),2);
+                            ind_text="indiferent="+to_string(calcularPorcentagem(indiferent,NUM_PESSOAS))+"%%";
+                            putText(gamb,ind_text,cvPoint(POS_X,POS_Y+80),6,1,cvScalar(0,255,255),2);
+                            cout<<"qtd pessoas="<<NUM_PESSOAS<<endl;
                             cout<<like_text<<" \t"<<deslike_text<<" \t"<<ind_text<<endl;
-                            numLike=numDeslike=indiferent=0;
                             iter=0;
+                            wait=1;
+                            cout<<"entra no wait\n";
                             // Display it all on the screen
                             win.clear_overlay();
                             win.set_image(cimg);
