@@ -29,21 +29,24 @@
 
 #include <dlib/opencv.h>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
+#include <dlib/gui_widgets/drawable.h>
 #include <omp.h>
 #include <Python.h>
 #include "myfeatures.h"
+#include "math.h"
 
 using namespace dlib;
 using namespace std;
 
 #define BUFFER_SIZE 5
-#define POS_X 10
-#define POS_Y 50
+#define POS_X 520
+#define POS_Y 140
 #define NUM_PESSOAS numDeslike+numLike+indiferent
 
 enum {
@@ -134,7 +137,7 @@ std::vector<int> classify(std::vector<double> feat)
 }
 
 
-double calcularPorcentagem(int x,int y)
+float calcularPorcentagem(int x,int y)
 {
     return x*100 / (double)y;
 }
@@ -164,21 +167,26 @@ int maiorEmocao(int* buffer,int iter)
         }
     }
     cout<<"VETOR\n";
-    int max = *max_element(v,v+5);
+    int max = *max_element(v,v+5),ret=0;
     for (int i = 0; i < 5; ++i){
         if (v[i]==max)
-            return i;
+            ret =i;
     }
+    return ret;
 }
 
 int main()
 {
-    cv::Mat temp;
+    cv::Mat temp, like, deslike, neutro, fechar;
+    like = cv::imread("like.jpeg");
+    deslike = cv::imread("deslike.jpeg");
+    neutro = cv::imread("neutro.jpeg");
+    fechar = cv::imread("fechar.jpg");
     std::vector<double> feat;
     /* Buffer circular que para colocar
     frames processados pela webcam */
     cv::Mat aux_mat;
-    string aux_text="",like_text="",deslike_text="",ind_text="";
+    string aux_text="",like_text="0.0%",deslike_text="0.0%",ind_text="0.0%";
 
      /**************Flags control*****************/
     int numLike=0,numDeslike=0,indiferent=0;
@@ -210,6 +218,7 @@ int main()
         deserialize("shape_predictor_68_face_landmarks.dat") >> pose_model;
         image_window win;
 
+
         // uma nova thread é criada junto a master
         #pragma omp parallel num_threads(2)
         {
@@ -223,11 +232,15 @@ int main()
                     {
                         cout<<"capture "<<ind<<"    "<<iter<<endl;
                         cap >> temp;
+                        like.copyTo(temp.rowRange(100, 100+like.rows).colRange(450, 450+like.cols));
+                        deslike.copyTo(temp.rowRange(200, 200+deslike.rows).colRange(450, 450+deslike.cols));
+                        neutro.copyTo(temp.rowRange(300, 300+neutro.rows).colRange(450, 450+neutro.cols));
+                        //fechar.copyTo(temp.rowRange(400, 400+fechar.rows).colRange(550, 550+fechar.cols));
                         aux_mat = temp;
                         cv_image<bgr_pixel> cimg(temp);
-                        putText(temp,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(0,255,255),2);
-                        putText(temp,deslike_text,cvPoint(POS_X,POS_Y+40),6,1,cvScalar(0,255,255),2);
-                        putText(temp,ind_text,cvPoint(POS_X,POS_Y+80),6,1,cvScalar(0,255,255),2);
+                        putText(temp,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(35,142,35),2);
+                        putText(temp,deslike_text,cvPoint(POS_X,POS_Y+100),6,1,cvScalar(0,0,255),2);
+                        putText(temp,ind_text,cvPoint(POS_X,POS_Y+200),6,1,cvScalar(0,255,255),2);
                         win.set_image(cimg);
                         ind++;
                     }
@@ -292,13 +305,21 @@ int main()
                             }
 
                             cv::Mat gamb = toMat(cimg);
-                            ;
-                            like_text="like="+to_string(calcularPorcentagem(numLike,NUM_PESSOAS))+"%%";
-                            putText(gamb,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(0,255,255),2);
-                            deslike_text ="deslike="+to_string(calcularPorcentagem(numDeslike,NUM_PESSOAS))+"%%";
-                            putText(gamb,deslike_text,cvPoint(POS_X,POS_Y+40),6,1,cvScalar(0,255,255),2);
-                            ind_text="indiferent="+to_string(calcularPorcentagem(indiferent,NUM_PESSOAS))+"%%";
-                            putText(gamb,ind_text,cvPoint(POS_X,POS_Y+80),6,1,cvScalar(0,255,255),2);
+                            float aux = calcularPorcentagem(numLike,NUM_PESSOAS);
+                            int aux2 = aux, aux3 = round(100*(aux-aux2));
+                            //like_text=to_string(calcularPorcentagem(like,NUM_PESSOAS))+"%";
+                            like_text=to_string(aux2)+"."+to_string(aux3)+"%";
+                            putText(gamb,like_text,cvPoint(POS_X,POS_Y),6,1,cvScalar(35,142,35),2);
+                            aux = calcularPorcentagem(numDeslike,NUM_PESSOAS);
+                            aux2 = aux, aux3 = round(100*(aux-aux2));
+                            //deslike_text=to_string(aux2)+"."+to_string(aux3)+"%";
+                            deslike_text = to_string(aux2)+"."+to_string(aux3)+"%";
+                            putText(gamb,deslike_text,cvPoint(POS_X,POS_Y+100),6,1,cvScalar(0,0,255),2);
+                            aux = calcularPorcentagem(indiferent,NUM_PESSOAS);
+                            aux2 = aux, aux3 = round(100*(aux-aux2));
+                            //ind_text=to_string(calcularPorcentagem(indiferent,NUM_PESSOAS))+"%";
+                            ind_text = to_string(aux2)+"."+to_string(aux3)+"%";
+                            putText(gamb,ind_text,cvPoint(POS_X,POS_Y+200),6,1,cvScalar(0,255,255),2);
                             cout<<"qtd pessoas="<<NUM_PESSOAS<<endl;
                             cout<<like_text<<" \t"<<deslike_text<<" \t"<<ind_text<<endl;
                             iter=0;
@@ -307,7 +328,7 @@ int main()
                             // Display it all on the screen
                             win.clear_overlay();
                             win.set_image(cimg);
-                            // win.add_overlay(render_face_detections(shapes));
+                            //win.add_overlay(render_face_detections(shapes));
 
                         }
                         ind = 0;
